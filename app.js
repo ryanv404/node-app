@@ -1,6 +1,6 @@
-require("dotenv").config();
+// require("dotenv").config();
+// const logger = require("morgan");
 
-const logger = require("morgan");
 const path = require("path");
 const methodOverride = require("method-override");
 const favicon = require("serve-favicon");
@@ -33,7 +33,7 @@ app.use(express.json());
 app.use(methodOverride('_method'));
 
 // Middleware
-app.use(logger("dev"));
+// app.use(logger("dev"));
 app.use(favicon(path.join(__dirname, "public", "abstract_favicon.svg")));
 app.use(express.static(path.join(__dirname, "public")));
 
