@@ -1,0 +1,17 @@
+    <%- include("head", {title: title}); -%>
+    <%- include("partials/navbar") -%>
+    <%- include("partials/messages") -%>
+
+    <div class="container-sm my-5 pt-5">
+      <h1 class="display-3 text-center my-5">Welcome</h1>
+      <p class="lead text-center my-5">Please sign in or register to proceed.</p>
+      <div class="mx-auto d-flex justify-content-center" style="width: 400px;">
+        <!-- Auth modal trigger buttons -->
+        <button type="button" id="login_btn" class="btn btn-success bg-gradient me-2 shadow" data-bs-toggle="modal" data-bs-target="#auth_modal">Sign in</button>
+        <button type="button" id="register_btn" class="btn btn-outline-success ms-2 shadow" data-bs-toggle="modal" data-bs-target="#auth_modal">Register</button>
+        <%- include("partials/auth_modal") -%>
+      </div>
+    </div>
+    <script src="./home.js"></script>
+  </body>
+</html>

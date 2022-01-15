@@ -1,0 +1,62 @@
+<!-- Sign in and registration modal -->
+<div class="modal fade" id="create_review_modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="createReviewModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content"  style="height: calc(100% - 1rem);">
+      <div class="modal-header">
+        <h5 class="modal-title" id="createReviewModalLabel">Movie Review</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h2 class="my-4 ms-1">Create a new review</h2>
+        <form action="/reviews" method="post">
+          <!-- Movie title input -->
+          <div class="form-floating mx-3">
+            <input type="text" id="movieTitle" name="movieName" class="form-control" placeholder="Movie title" autofocus autocomplete="off" required />
+            <label for="movieTitle">Movie title</label>
+          </div>
+          <!-- Review title input -->
+          <div class="form-floating mx-3 my-3">
+            <input type="text" id="reviewTitle" name="reviewTitle" class="form-control" placeholder="Review title" autocomplete="off" required />
+            <label for="reviewTitle">Review title</label>
+          </div>
+          <!-- Review body input -->
+          <div class="form-floating mx-3 mb-4">
+            <textarea style="height: 100px" type="text" id="reviewBody" name="reviewBody" class="form-control" placeholder="Your review" autocomplete="off" required></textarea>
+            <label for="reviewBody">Your review</label>
+          </div>
+          
+          <div class="form-floating mx-3 mb-4 d-flex">
+            <span class="align-self-center ms-3 pb-1 me-2">Star rating:</span>
+            <div>
+              <input type="radio" class="btn-check" name="reviewRating" id="check-1" value="1" autocomplete="off">
+              <label class="btn" for="check-1">
+                <i class="far fa-star" id="stars-1"></i>
+              </label>
+              <input type="radio" class="btn-check" name="reviewRating" id="check-2" value="2" autocomplete="off">
+              <label class="btn" for="check-2">
+                <i class="far fa-star" id="stars-2"></i>
+              </label>
+              <input type="radio" class="btn-check" name="reviewRating" id="check-3" value="3" autocomplete="off">
+              <label class="btn" for="check-3">
+                <i class="far fa-star" id="stars-3"></i>
+              </label>
+              <input type="radio" class="btn-check" name="reviewRating" id="check-4" value="4" autocomplete="off">
+              <label class="btn" for="check-4">
+                <i class="far fa-star" id="stars-4"></i>
+              </label>
+              <input type="radio" class="btn-check" name="reviewRating" id="check-5" value="5" autocomplete="off">
+              <label class="btn" for="check-5">
+                <i class="far fa-star" id="stars-5"></i>
+              </label>
+            </div>
+          </div>
+          
+          <!-- Create button -->
+          <div class="pt-4 modal-footer d-flex justify-content-center">
+            <button class="px-5 py-2 btn btn-outline-success shadow" type="submit">Create</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

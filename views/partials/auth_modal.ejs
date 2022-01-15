@@ -1,0 +1,103 @@
+<!-- Sign in and registration modal -->
+<div class="modal fade" id="auth_modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content"  style="height: calc(100% - 1rem);">
+      <div class="modal-header">
+        <h5 class="modal-title" id="authModalLabel">User Authentication</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="sign-in-tab" data-bs-toggle="tab" data-bs-target="#sign-in" type="button" role="tab" aria-controls="sign-in" aria-selected="true">Sign in</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="register-tab" data-bs-toggle="tab" data-bs-target="#register" type="button" role="tab" aria-controls="register" aria-selected="false">Register</button>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <!-- Sign in tab -->
+          <div class="tab-pane fade show active mt-3" id="sign-in" role="tabpanel" aria-labelledby="sign-in-tab">
+            <h2 class="my-4 ms-1">Please sign in</h2>
+            <form action="/login" method="post">
+              <!-- Username input -->
+              <div class="form-floating mx-3">
+                <input type="text" id="login_username" name="username" class="form-control" placeholder="Username" autofocus autocomplete="off" required />
+                <label for="login_username">Username</label>
+              </div>
+              <!-- Password input -->
+              <div class="form-floating mx-3 mt-2">
+                <input type="password" id="login_password" name="password" class="form-control" placeholder="Password" autocomplete="off" required />
+                <label for="login_password">Password</label>
+                <div class="d-flex justify-content-between mx-2 mt-2 mb-5">
+                  <!-- Remember user checkbox -->
+                  <div class="checkbox text-center">
+                    <label>
+                      <input class="form-check-input me-2" type="checkbox" name="remember_me" id="remember_me"/>Remember me
+                    </label>
+                  </div>
+                  <!-- Forgot password -->
+                  <a href="#" class="text-decoration-none"><small>Forgot password?</small></a>
+                </div>
+              </div>
+              <!-- Sign in button -->
+              <div class="pt-4 modal-footer d-flex justify-content-center">
+                <button class="px-5 py-2 btn btn-outline-success shadow" type="submit">Sign in</button>
+              </div>
+            </form>
+          </div>
+          <!-- Registration tab -->
+          <div class="tab-pane fade mt-3" id="register" role="tabpanel" aria-labelledby="register-tab">
+            <h2 class="my-4 ms-1">Register for an account</h2>
+            <form action="/users/register" method="post">
+              <!-- First name input -->
+              <div class="form-floating mx-3 mt-4">
+                <input type="text" class="form-control" id="fname" name="fname" placeholder="First name" autocomplete="off" autofocus required/>
+                <label for="fname">First name</label>
+              </div>
+              <!-- Last name input -->
+              <div class="form-floating mx-3 my-2">
+                <input type="text" class="form-control" id="lname" name="lname" placeholder="Last name" autocomplete="off" required/>
+                <label for="lname">Last name</label>
+              </div>
+              <!-- Email input -->
+              <div class="form-floating mx-3 my-2">
+                <input type="email" class="form-control" id="email" name="email" placeholder="Email" autocomplete="off" required/>
+                <label for="email">Email</label>
+              </div>
+              <!-- Username input -->
+              <div class="form-floating mx-3 my-2">
+                <input type="text" class="form-control" id="username" name="username" placeholder="Username" autocomplete="off" required/>
+                <label for="username">Username</label>
+              </div>
+              <!-- Password input -->
+              <div class="form-floating mx-3 my-2">
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password" autocomplete="off" required/>
+                <label for="password">Password</label>
+                <small class="text-muted ms-1">Must be at least 6 characters.</small>
+              </div>
+              <!-- Confirm password -->
+              <div class="form-floating mx-3 mt-3 mb-2">
+                <input type="password" class="form-control" id="confirm_pw" name="confirm_pw" placeholder="Confirm password" autocomplete="off" required/>
+                <label for="confirm_pw">Confirm password</label>
+              </div>
+              <!-- T&C's agreement -->
+              <div class="d-flex justify-content-center my-4">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="tc_agreement" id="tc_agreement" required/>
+                  <label class="form-check-label" for="tc_agreement">
+                    Agree to the <a href="#" class="text-decoration-none">terms and conditions</a>.
+                  </label>
+                </div>
+              </div>
+              <!-- Register button -->
+              <div class="pt-4 modal-footer d-flex justify-content-center">
+                <button class="px-5 py-2 btn btn-outline-success shadow" type="submit">Register</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

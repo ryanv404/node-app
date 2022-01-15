@@ -1,0 +1,169 @@
+<%- include("head", {title: title}); -%>
+<%- include("partials/navbar") -%>
+<%- include("partials/messages") -%>
+
+<div class="container-sm my-5">
+  <h1 class="text-center display-3 my-5 pt-5">Movie Reviews</h1>
+  <!-- Create review modal trigger button -->
+  <div class="d-flex justify-content-center mb-5">
+    <button type="button" id="create_btn" class="btn btn-success bg-gradient shadow" data-bs-toggle="modal" data-bs-target="#create_review_modal">Create a review</button>
+  </div>
+  <hr class="text-muted mb-5">
+  <%- include("partials/create_review") -%>
+  <% if (reviews.length > 0) { %>
+    <% reviews.forEach(review => { %>
+      <div class="row mb-5">
+        <div class="card col-8 offset-2 shadow-sm px-0">
+          <div class="card-body px-0 py-0">
+            <div class="d-flex ps-3 pt-3">
+              <h4 class="card-title me-auto align-self-center pe-2"><%= review.reviewTitle %></h5>
+              <!-- Edit review modal trigger button -->
+              <div>
+                <button type="button" id="edit_modal_btn" class="btn me-1 mt-1" style="padding-top: 0.15rem;" data-bs-toggle="modal" data-bs-target="#edit_review_modal" onMouseOver="this.classList.toggle('shadow-sm')" onMouseOut="this.classList.toggle('shadow-sm')" data-bs-reviewID="<%= review._id %>">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc107" class="bi bi-pencil" viewBox="0 0 16 16">
+                    <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                  </svg>
+                </button>
+              </div>
+              <form action="/reviews/<%= review._id %>/?_method=DELETE" method="post">
+                <button type="submit" id="card_delete_btn" class="btn mt-1 me-1" style="padding-top: 0.15rem;" onMouseOver="this.classList.toggle('shadow-sm')" onMouseOut="this.classList.toggle('shadow-sm')">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#dc3545" class="bi bi-trash" viewBox="0 0 16 16">
+                    <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                    <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+                  </svg>
+                </button>
+              </form>
+            </div>
+            <h6 class="card-subtitle text-muted px-3 mt-2 mb-3"><%= review.movieName %></h6>
+            <p class="card-text px-3 mb-4"><%= review.reviewBody %></p>
+            <p class="card-text px-3 mb-4 d-flex justify-content-center">
+              <%- include("partials/star_ratings", {review}) -%>
+            </p>
+            
+            <div class="card-footer mt-3 text-muted pb-2 text-center">
+              <%= moment(review.createdAt, "YYYYMMDD").fromNow(); %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% }); %>
+  <% }; %>
+</div>
+<%- include("partials/edit_review") -%>
+<script>
+    const star_1 = document.getElementById("stars-1");
+    const star_2 = document.getElementById("stars-2");
+    const star_3 = document.getElementById("stars-3");
+    const star_4 = document.getElementById("stars-4");
+    const star_5 = document.getElementById("stars-5");
+    const edit_star_1 = document.getElementById("edit_stars-1");
+    const edit_star_2 = document.getElementById("edit_stars-2");
+    const edit_star_3 = document.getElementById("edit_stars-3");
+    const edit_star_4 = document.getElementById("edit_stars-4");
+    const edit_star_5 = document.getElementById("edit_stars-5");
+
+    const star_list = [star_1, star_2, star_3, star_4, star_5];
+    const edit_star_list = [edit_star_1, edit_star_2, edit_star_3, edit_star_4, edit_star_5];
+    
+    const filledClasses = "fas fa-star text-warning";
+    const unfilledClasses = "far fa-star";
+    
+    const displayRating = (stars) => {
+      stars.forEach((star) => {
+        star.onclick = () => {
+          let i = stars.indexOf(star);
+          const stars_length = stars.length;
+
+          if (star.className === unfilledClasses) {
+            for (i; i >= 0; i--) {
+              stars[i].className = filledClasses;
+            }
+          // Allow for zero star rating if already set to 1 star
+          } else if (star.className === filledClasses && 
+                    (i === 0) &&
+                    (stars[i + 1].className === unfilledClasses)) {
+            for (i; i < stars_length; i++) {
+              stars[i].className = unfilledClasses;
+            }
+          } else {
+            i += 1;
+            for (i; i < stars_length; i++) {
+              stars[i].className = unfilledClasses;
+            }
+          }
+        };
+      });
+    };
+
+    const editDisplayRating = (stars) => {
+      stars.forEach((star) => {
+        star.onclick = () => {
+          let i = stars.indexOf(star);
+          const stars_length = stars.length;
+          
+          const ratingRadioID = "edit-check-" + String(i + 1);
+          console.log(ratingRadioID);
+          document.getElementById(ratingRadioID).checked = true;
+          if (star.className === unfilledClasses) {
+            for (i; i >= 0; i--) {
+              stars[i].className = filledClasses;
+            }
+          // Allow for zero star rating if already set to 1 star
+          } else if (star.className === filledClasses && 
+                    (i === 0) &&
+                    (stars[i + 1].className === unfilledClasses)) {
+            for (i; i < stars_length; i++) {
+              stars[i].className = unfilledClasses;
+            }
+          } else {
+            i += 1;
+            for (i; i < stars_length; i++) {
+              stars[i].className = unfilledClasses;
+            }
+          }
+        };
+      });
+    };
+    displayRating(star_list);
+    editDisplayRating(edit_star_list);
+
+    const edit_modal = document.getElementById("edit_review_modal");
+    edit_modal.addEventListener("show.bs.modal", (event) => {
+      const btn = event.relatedTarget;
+      const revID = btn.getAttribute("data-bs-reviewID");
+
+      function run() {
+        const xhr = new XMLHttpRequest();
+        const url = 'http://localhost:3000/reviews/' + revID;
+        
+        xhr.open('GET', url, true);
+        
+        xhr.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            const newReview = JSON.parse(this.responseText);
+            document.getElementById("edit_movieTitle").value = newReview.movieName;
+            document.getElementById("edit_reviewTitle").value = newReview.reviewTitle;
+            document.getElementById("edit_reviewContent").value = newReview.reviewBody;
+            const put_link = "/reviews/" + String(newReview._id) + "/?_method=PUT";
+            document.getElementById("edit-form").setAttribute("action", put_link);
+
+            if (newReview.reviewRating != 0) {
+              const ratingID = "edit-check-" + String(newReview.reviewRating);
+              document.getElementById(ratingID).checked = true;
+              let i = Number(newReview.reviewRating) - 1;
+              for (i; i >= 0; i--) {
+                edit_star_list[i].className = filledClasses;
+              }
+            }
+          }
+        }
+        xhr.send();
+      };
+      if (revID) {
+        run();
+      }
+    });
+    
+  </script>
+</body>
+</html>
