@@ -13,7 +13,12 @@ router.get('/', ensureAuthenticated, async (req, res) => {
   } catch (err) {
     console.log(err);
   }
-  res.render('tasks', {user: req.user, title: "Tasks", tasks})
+  res.render("tasks", {
+    user: req.user,
+    title: "Tasks",
+    tasks,
+    loggedIn: req.isAuthenticated(),
+  });
 });
 
 // Create a new task

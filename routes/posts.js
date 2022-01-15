@@ -13,7 +13,12 @@ router.get("/", ensureAuthenticated, async (req, res) => {
   } catch (err) {
     console.log(err);
   }
-  res.render("posts", {user: req.user, title: "Posts", posts});
+  res.render("posts", {
+    user: req.user,
+    title: "Posts",
+    posts,
+    loggedIn: req.isAuthenticated(),
+  });
 });
 
 // Create a new post

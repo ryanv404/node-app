@@ -9,13 +9,17 @@ const {
 
 // Welcome page
 router.get('/', forwardAuthenticated, (req, res) => {
-  res.render('home', {title: "Welcome"});
+  res.render('home', {title: "Welcome", loggedIn: req.isAuthenticated()});
 });
 
 // User's dashboard
 router.get('/dashboard', ensureAuthenticated, (req, res) => {
   const firstname = req.user.firstName;
-  res.render("dashboard", {user: firstname, title: "Dashboard"});
+  res.render("dashboard", {
+    user: firstname,
+    title: "Dashboard",
+    loggedIn: req.isAuthenticated(),
+  });
 });
 
 // Log in user

@@ -30,7 +30,11 @@ router.post("/register", (req, res) => {
       .then((user) => {
         if (user) {
           errors.push({msg: "Username already exists."});
-          res.render("home", {title: "Home", errors});
+          res.render("home", {
+            title: "Home",
+            errors,
+            loggedIn: req.isAuthenticated(),
+          });
         } else {
           const newUser = new User({
             firstName: fname,
@@ -61,7 +65,10 @@ router.post("/register", (req, res) => {
 
 // Password reset form
 router.get("/reset", (req, res) => {
-  res.render("reset", {title: "Reset Password"});
+  res.render("reset", {
+    title: "Reset Password",
+    loggedIn: req.isAuthenticated(),
+  });
 });
 
 // Reset password
@@ -96,7 +103,11 @@ router.post("/reset", async (req, res) => {
   }
   
   if (errors.length > 0) {
-    res.render("reset", {title: "Reset Password", errors});
+    res.render("reset", {
+      title: "Reset Password",
+      errors,
+      loggedIn: req.isAuthenticated(),
+    });
   } else {
     // Hash new password and store it
     bcrypt.genSalt(10, (err, salt) => {
@@ -117,7 +128,11 @@ router.post("/reset", async (req, res) => {
 // User's profile
 router.get("/profile", ensureAuthenticated, async (req, res) => {
   const user = await User.findOne({username: req.user.username});
-  res.render("profile", {user: user, title: "Profile"});
+  res.render("profile", {
+    user: user,
+    title: "Profile",
+    loggedIn: req.isAuthenticated(),
+  });
 });
 
 // TODO: Update profile
