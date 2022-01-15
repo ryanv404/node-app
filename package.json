@@ -3,12 +3,17 @@
   "version": "0.1.0",
   "description": "A new web app. No clue what it does uniquely yet...still brainstorming.",
   "main": "app.js",
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js",
     "test": "mocha"
   },
-  "keywords": [],
+  "keywords": [
+    "node"
+  ],
   "author": "Ryan",
   "license": "ISC",
   "dependencies": {
