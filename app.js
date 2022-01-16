@@ -34,7 +34,7 @@ app.use(methodOverride('_method'));
 
 // Middleware
 // app.use(logger("dev"));
-app.use(favicon(path.join(__dirname, "public", "abstract_favicon.svg")));
+app.use(favicon(path.join(__dirname, "public", "favicon.ico")));
 app.use(express.static(path.join(__dirname, "public")));
 
 // Express session
