@@ -23,8 +23,9 @@ router.post("/register", (req, res) => {
     errors.push({msg: "Password must be at least 6 characters."});
   }
 
+  const loggedIn = req.isAuthenticated();
   if (errors.length > 0) {
-    res.render("home", {title: "Home", errors});
+    res.render("home", {title: "Home", errors, loggedIn});
   } else {
     User.findOne({username: username})
       .then((user) => {
@@ -33,7 +34,7 @@ router.post("/register", (req, res) => {
           res.render("home", {
             title: "Home",
             errors,
-            loggedIn: req.isAuthenticated(),
+            loggedIn
           });
         } else {
           const newUser = new User({
@@ -65,9 +66,10 @@ router.post("/register", (req, res) => {
 
 // Password reset form
 router.get("/reset", (req, res) => {
+  const loggedIn = req.isAuthenticated();
   res.render("reset", {
     title: "Reset Password",
-    loggedIn: req.isAuthenticated(),
+    loggedIn
   });
 });
 
@@ -101,12 +103,12 @@ router.post("/reset", async (req, res) => {
       if (!isMatch) errors.push({msg: "Incorrect password."});
     });
   }
-  
+  const loggedIn = req.isAuthenticated();
   if (errors.length > 0) {
     res.render("reset", {
       title: "Reset Password",
       errors,
-      loggedIn: req.isAuthenticated(),
+      loggedIn
     });
   } else {
     // Hash new password and store it
@@ -127,11 +129,12 @@ router.post("/reset", async (req, res) => {
 
 // User's profile
 router.get("/profile", ensureAuthenticated, async (req, res) => {
+  const loggedIn = req.isAuthenticated();
   const user = await User.findOne({username: req.user.username});
   res.render("profile", {
     user: user,
     title: "Profile",
-    loggedIn: req.isAuthenticated(),
+    loggedIn
   });
 });
 

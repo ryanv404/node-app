@@ -7,6 +7,7 @@ const Post = require("../models/Post");
 
 // Get all of a user's posts
 router.get("/", ensureAuthenticated, async (req, res) => {
+  const loggedIn = req.isAuthenticated();
   let posts = [];
   try {
     posts = await Post.find({postOwner: req.user.username});
@@ -17,7 +18,7 @@ router.get("/", ensureAuthenticated, async (req, res) => {
     user: req.user,
     title: "Posts",
     posts,
-    loggedIn: req.isAuthenticated(),
+    loggedIn
   });
 });
 

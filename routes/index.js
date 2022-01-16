@@ -15,11 +15,12 @@ router.get('/', forwardAuthenticated, (req, res) => {
 
 // User's dashboard
 router.get('/dashboard', ensureAuthenticated, (req, res) => {
+  const loggedIn = req.isAuthenticated();
   const firstname = req.user.firstName;
   res.render("dashboard", {
     user: firstname,
     title: "Dashboard",
-    loggedIn: req.isAuthenticated(),
+    loggedIn
   });
 });
 
