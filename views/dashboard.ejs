@@ -4,7 +4,7 @@
     <%- include("partials/head", {title: title}); %>
   </head>
   <body>
-    <%- include("partials/navbar"); %>
+    <%- include("partials/navbar", {loggedIn: true}); %>
     <%- include("partials/messages"); %>
 
     <div class="container-sm shadow-lg py-4 rounded" style="margin-top: 100px;">

@@ -7,7 +7,6 @@ const Task = require("../models/Task");
 
 // Get the user's tasks
 router.get('/', ensureAuthenticated, async (req, res) => {
-  const loggedIn = req.isAuthenticated();
   let tasks = [];
   try {
     tasks = await Task.find({taskOwner: req.user.username});
@@ -17,8 +16,7 @@ router.get('/', ensureAuthenticated, async (req, res) => {
   res.render("tasks", {
     user: req.user,
     title: "Tasks",
-    tasks,
-    loggedIn
+    tasks
   });
 });
 

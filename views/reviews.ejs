@@ -4,7 +4,7 @@
     <%- include("partials/head", {title: title}); %>
   </head>
   <body>
-    <%- include("partials/navbar"); %>
+    <%- include("partials/navbar", {loggedIn: true}); %>
     <%- include("partials/messages"); %>
     
     <div class="container-sm my-5">
@@ -55,6 +55,6 @@
       <% }; %>
     </div>
     <%- include("partials/edit_review") -%>
-    <script src="./main.js"></script>
+    <script type="text/javascript" src="/public/reviews.js"></script>
   </body>
 </html>

@@ -7,13 +7,11 @@ const Review = require("../models/Review");
 // Get all reviews
 router.get("/", async (req, res) => {
   try {
-    const loggedIn = req.isAuthenticated();
     const reviews = await Review.find().sort("-createdAt -updatedAt");
     res.render("reviews", {
       title: "Reviews",
       reviews,
       moment,
-      loggedIn
     });
   } catch (error) {
     console.log(error);

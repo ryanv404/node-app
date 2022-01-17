@@ -14,10 +14,9 @@ const app = express();
 const passport = require("passport");
 require('./config/passport')(passport);
 
-// Connect to MongoDB
-connectDB(process.env.MONGO_URI)
-  .then(() => console.log("Connected to database!"))
-  .catch(err => console.log(err));
+(async () => {
+  
+})();
 
 // EJS configuration
 app.set("views", path.join(__dirname, "views"));
@@ -36,7 +35,7 @@ if (process.env.NODE_ENV === "development") {
   const logger = require("morgan");
   app.use(logger("dev"));
 }
-app.use(express.static(path.join(__dirname, "public")));
+app.use("/public", express.static(path.join(__dirname, "public")));
 
 // Express session
 app.use(
@@ -81,6 +80,19 @@ app.use(require("./middleware/not-found"));
 
 // Start server
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server listening on http://localhost:${PORT}`));
+const start_server = async () => {
+  try {
+    // Connect to MongoDB
+    await connectDB(process.env.MONGO_URI);
+    console.log("Connected to the database.");
+    // Start server
+    app.listen(PORT, () => console.log(`Server listening on http://localhost:${PORT}`));
+  }
+  catch (error) {
+    console.log(error);
+  }
+};
+
+start_server();
 
 module.exports = app;

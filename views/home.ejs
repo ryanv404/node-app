@@ -4,7 +4,7 @@
     <%- include("partials/head", {title: title}); %>
   </head>
   <body>
-    <%- include("partials/navbar"); %>
+    <%- include("partials/navbar", {loggedIn: false}); %>
     <%- include("partials/messages"); %>
     
     <div class="container-sm my-5 pt-5">
@@ -17,6 +17,6 @@
         <%- include("partials/auth_modal") -%>
       </div>
     </div>
-    <script src="./main.js"></script>
+    <script type="text/javascript" src="/public/main.js"></script>
   </body>
 </html>
