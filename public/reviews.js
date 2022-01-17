@@ -91,7 +91,7 @@ edit_modal.addEventListener("show.bs.modal", (event) => {
 
   function run() {
     const xhr = new XMLHttpRequest();
-    const url = "http://localhost:3000/reviews/" + revID;
+    const url = "https://rv404.herokuapp.com/reviews/" + revID;
 
     xhr.open("GET", url, true);
 
