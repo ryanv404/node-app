@@ -1,13 +1,18 @@
-<%- include("head", {title: title}); -%>
-<%- include("partials/navbar") -%>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("partials/head", {title: title}); %>
+  </head>
+  <body>
+    <%- include("partials/navbar"); %>
+    <%- include("partials/messages"); %>
 
-<div class="container-sm" style="margin-top: 100px;">
-  <h1 class="display-3 text-center my-5">Error</h1>
-  <p class="lead text-center my-5"><%= msg %></p>
-</div>
+    <div class="container-sm" style="margin-top: 100px;">
+      <h1 class="display-3 text-center my-5">Error</h1>
+      <p class="lead text-center my-5"><%= msg %></p>
+    </div>
 
-<p class="fs-6 mb-1 text-center">Go <a class="text-decoration-none text-info" href="javascript:window.history.back()">back</a>.
-<p class="fs-6 text-center mb-5">Return <a class="text-decoration-none text-info" href="/">home</a>.
-  
-</body>
+    <p class="fs-6 mb-1 text-center">Go <a class="text-decoration-none text-info" href="javascript:window.history.back()">back</a>.
+    <p class="fs-6 text-center mb-5">Return <a class="text-decoration-none text-info" href="/">home</a>.
+  </body>
 </html>

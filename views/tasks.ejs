@@ -1,7 +1,12 @@
-<%- include("head", {title: title}); -%>
-<%- include("partials/navbar") -%>
-<%- include("partials/messages") -%>
-
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("partials/head", {title: title}); %>
+  </head>
+  <body>
+    <%- include("partials/navbar"); %>
+    <%- include("partials/messages"); %>
+    
     <div class="container-sm" style="margin-top: 100px;">
       <h1 class="display-3 text-center mt-5 mb-4"><span class="text-capitalize"><%= user.firstName %></span>'s Project Task Manager</h1>
       <form action="/tasks" method="post" class="mx-auto my-5">
