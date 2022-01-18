@@ -2,7 +2,6 @@ require("dotenv").config();
 
 const path = require("path");
 const methodOverride = require("method-override");
-const favicon = require("serve-favicon");
 const connectDB = require("./db/connect");
 const MongoStore = require("connect-mongo");
 const session = require("express-session");
