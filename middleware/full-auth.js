@@ -14,7 +14,7 @@ const authenticateUser = async (req, res, next) => {
   }
 
   if (!token) {
-    throw new CustomError.UnauthenticatedError('Authentication invalid');
+    throw new CustomError.UnauthenticatedError('Authentication invalid.');
   }
   try {
     const payload = isTokenValid(token);
@@ -27,19 +27,17 @@ const authenticateUser = async (req, res, next) => {
 
     next();
   } catch (error) {
-    throw new CustomError.UnauthenticatedError('Authentication invalid');
+    throw new CustomError.UnauthenticatedError('Authentication invalid.');
   }
 };
 
 const authorizeRoles = (...roles) => {
   return (req, res, next) => {
     if (!roles.includes(req.user.role)) {
-      throw new CustomError.UnauthorizedError(
-        'Unauthorized to access this route'
-      );
+      throw new CustomError.UnauthorizedError('Unauthorized to access this route.');
     }
     next();
   };
 };
 
-module.exports = { authenticateUser, authorizeRoles };
+module.exports = {authenticateUser, authorizeRoles};
