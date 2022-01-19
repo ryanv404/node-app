@@ -21,7 +21,7 @@
             <div class="card col-8 offset-2 shadow-sm px-0">
               <div class="card-body px-0 py-0">
                 <div class="d-flex ps-3 pt-3">
-                  <h4 class="card-title me-auto align-self-center pe-2"><%= review.reviewTitle %></h5>
+                  <h4 class="card-title me-auto align-self-center pe-2"><%= review.title %></h5>
                   <!-- Edit review modal trigger button -->
                   <div>
                     <button type="button" id="edit_modal_btn" class="btn me-1 mt-1" style="padding-top: 0.15rem;" data-bs-toggle="modal" data-bs-target="#edit_review_modal" onMouseOver="this.classList.toggle('shadow-sm')" onMouseOut="this.classList.toggle('shadow-sm')" data-bs-reviewID="<%= review._id %>">
@@ -40,7 +40,7 @@
                   </form>
                 </div>
                 <h6 class="card-subtitle text-muted px-3 mt-2 mb-3"><%= review.movieName %></h6>
-                <p class="card-text px-3 mb-4"><%= review.reviewBody %></p>
+                <p class="card-text px-3 mb-4"><%= review.comment %></p>
                 <p class="card-text px-3 mb-4 d-flex justify-content-center">
                   <%- include("partials/star_ratings", {review}) -%>
                 </p>

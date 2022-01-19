@@ -1,30 +1,75 @@
 const mongoose = require("mongoose");
 
-// Define the schema
-const reviewSchema = new mongoose.Schema({
-  reviewTitle: {
-    type: String,
-    maxlength: [100, "Title is too long (max 100 characters)."],
-    required: [true, "Title cannot be empty."],
-    unique: true
+const ReviewSchema = mongoose.Schema(
+  {
+    rating: {
+      type: Number,
+      min: 1,
+      max: 5,
+      required: [true, "Please provide a rating."],
+    },
+    title: {
+      type: String,
+      trim: true,
+      required: [true, "Please provide a review title."],
+      maxlength: 100,
+    },
+      movieTitle: {
+      type: String,
+      trim: true,
+      required: [true, "Please provide a movie title."],
+      maxlength: 100,
+    },
+    comment: {
+      type: String,
+      required: [true, "Please provide a review text."],
+    },
+    user: {
+      type: mongoose.Schema.ObjectId,
+      ref: "User",
+      required: true,
+    },
+    product: {
+      type: mongoose.Schema.ObjectId,
+      ref: "Product",
+      required: true,
+    },
   },
-  movieName: {
-    type: String,
-    maxlength: [100, "Movie name is too long (max 200 characters)."],
-    required: [true, "Movie name cannot be empty."],
-  },
-  reviewBody: {
-    type: String,
-    maxlength: [1000, "Review body is too long (max 1000 characters)."],
-    required: [true, "Review body cannot be empty."],
-  },
-  reviewRating: {
-    type: Number,
-    default: 0,
-  },
-}, {timestamps: true});
+  {timestamps: true}
+);
+ReviewSchema.index({product: 1, user: 1}, {unique: true});
 
-// Define mongoose model
-const Review = mongoose.model("Review", reviewSchema);
+ReviewSchema.statics.calculateAverageRating = async function (productId) {
+  const result = await this.aggregate([
+    {$match: {product: productId}},
+    {
+      $group: {
+        _id: null,
+        averageRating: {$avg: "$rating"},
+        numOfReviews: {$sum: 1},
+      },
+    },
+  ]);
 
-module.exports = Review;
+  try {
+    await this.model("Product").findOneAndUpdate(
+      {_id: productId},
+      {
+        averageRating: Math.ceil(result[0]?.averageRating || 0),
+        numOfReviews: result[0]?.numOfReviews || 0,
+      }
+    );
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+ReviewSchema.post("save", async function () {
+  await this.constructor.calculateAverageRating(this.product);
+});
+
+ReviewSchema.post("remove", async function () {
+  await this.constructor.calculateAverageRating(this.product);
+});
+
+module.exports = mongoose.model("Review", ReviewSchema);

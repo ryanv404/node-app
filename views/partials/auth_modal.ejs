@@ -20,10 +20,10 @@
           <div class="tab-pane fade show active mt-3" id="sign-in" role="tabpanel" aria-labelledby="sign-in-tab">
             <h2 class="my-4 ms-1">Please sign in</h2>
             <form action="/login" method="post">
-              <!-- Username input -->
+              <!-- Email input -->
               <div class="form-floating mx-3">
-                <input type="text" id="login_username" name="username" class="form-control" placeholder="Username" autofocus autocomplete="off" required />
-                <label for="login_username">Username</label>
+                <input type="email" id="login_email" name="email" class="form-control" placeholder="Email" autofocus autocomplete="off" required />
+                <label for="login_email">Email</label>
               </div>
               <!-- Password input -->
               <div class="form-floating mx-3 mt-2">
@@ -50,25 +50,15 @@
           <div class="tab-pane fade mt-3" id="register" role="tabpanel" aria-labelledby="register-tab">
             <h2 class="my-4 ms-1">Register for an account</h2>
             <form action="/users/register" method="post">
-              <!-- First name input -->
+              <!-- Name input -->
               <div class="form-floating mx-3 mt-4">
-                <input type="text" class="form-control" id="fname" name="fname" placeholder="First name" autocomplete="off" autofocus required/>
-                <label for="fname">First name</label>
-              </div>
-              <!-- Last name input -->
-              <div class="form-floating mx-3 my-2">
-                <input type="text" class="form-control" id="lname" name="lname" placeholder="Last name" autocomplete="off" required/>
-                <label for="lname">Last name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Name" autocomplete="off" autofocus required/>
+                <label for="name">Name</label>
               </div>
               <!-- Email input -->
               <div class="form-floating mx-3 my-2">
                 <input type="email" class="form-control" id="email" name="email" placeholder="Email" autocomplete="off" required/>
                 <label for="email">Email</label>
-              </div>
-              <!-- Username input -->
-              <div class="form-floating mx-3 my-2">
-                <input type="text" class="form-control" id="username" name="username" placeholder="Username" autocomplete="off" required/>
-                <label for="username">Username</label>
               </div>
               <!-- Password input -->
               <div class="form-floating mx-3 my-2">
@@ -80,15 +70,6 @@
               <div class="form-floating mx-3 mt-3 mb-2">
                 <input type="password" class="form-control" id="confirm_pw" name="confirm_pw" placeholder="Confirm password" autocomplete="off" required/>
                 <label for="confirm_pw">Confirm password</label>
-              </div>
-              <!-- T&C's agreement -->
-              <div class="d-flex justify-content-center my-4">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" name="tc_agreement" id="tc_agreement" required/>
-                  <label class="form-check-label" for="tc_agreement">
-                    Agree to the <a href="#" class="text-decoration-none">terms and conditions</a>.
-                  </label>
-                </div>
               </div>
               <!-- Register button -->
               <div class="pt-4 modal-footer d-flex justify-content-center">

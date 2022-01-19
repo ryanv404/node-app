@@ -1,0 +1,408 @@
+[
+  {
+    key: 'americanfootball_nfl',
+    group: 'American Football', 
+    title: 'NFL',
+    description: 'US Football', 
+    active: true,
+    has_outrights: false        
+  },
+  {
+    key: 'americanfootball_nfl_super_bowl_winner',
+    group: 'American Football',
+    title: 'NFL Super Bowl Winner',
+    description: 'Super Bowl Winner 2021/2022',
+    active: true,
+    has_outrights: true
+  },
+  {
+    key: 'aussierules_afl',
+    group: 'Aussie Rules',
+    title: 'AFL',
+    description: 'Aussie Football',
+    active: true,
+    has_outrights: false
+  },
+  {
+    key: 'baseball_mlb_world_series_winner',
+    group: 'Baseball',
+    title: 'MLB World Series Winner',
+    description: 'World Series Winner 2022',
+    active: true,
+    has_outrights: true
+  },
+  {
+    key: 'basketball_euroleague',
+    group: 'Basketball',
+    title: 'Basketball Euroleague',
+    description: 'Basketball Euroleague',
+    active: true,
+    has_outrights: false
+  },
+  {
+    key: 'basketball_nba',
+    group: 'Basketball',
+    title: 'NBA',
+    description: 'US Basketball',
+    active: true,
+    has_outrights: false
+  },
+  {
+    key: 'basketball_nba_championship_winner',
+    group: 'Basketball',
+    title: 'NBA Championship Winner',
+    description: 'Championship Winner 2021/2022',
+    active: true,
+    has_outrights: true
+  },
+  {
+    key: 'basketball_ncaab',
+    group: 'Basketball',
+    title: 'NCAAB',
+    description: 'US College Basketball',
+    active: true,
+    has_outrights: false
+  },
+  {
+    key: 'cricket_big_bash',
+    group: 'Cricket',
+    title: 'Big Bash',
+    description: 'Big Bash League',
+    active: true,
+    has_outrights: false
+  },
+  {
+    key: 'cricket_odi',
+    group: 'Cricket',
+    title: 'One Day Internationals',
+    description: 'One Day Internationals',
+    active: true,
+    has_outrights: false
+  },
+  {
+    key: 'golf_masters_tournament_winner',
+    group: 'Golf',
+    title: 'Masters Tournament Winner',
+    description: '2022 Winner',
+    active: true,
+    has_outrights: true
+  },
+  {
+    key: 'golf_pga_championship_winner',
+    group: 'Golf',
+    title: 'PGA Championship Winner',
+    description: '2022 Winner',
+    active: true,
+    has_outrights: true
+  },
+  {
+    key: 'golf_the_open_championship_winner',
+    group: 'Golf',
+    title: 'The Open Winner',
+    description: '2022 Winner',
+    active: true,
+    has_outrights: true
+  },
+  {
+    key: 'golf_us_open_winner',
+    group: 'Golf',
+    title: 'US Open Winner',
+    description: '2022 Winner',
+    active: true,
+    has_outrights: true
+  },
+  {
+    key: 'icehockey_nhl',
+    group: 'Ice Hockey',
+    title: 'NHL',
+    description: 'US Ice Hockey',
+    active: true,
+    has_outrights: false
+  },
+  {
+    key: 'icehockey_nhl_championship_winner',
+    group: 'Ice Hockey',
+    title: 'NHL Championship Winner',
+    description: 'Stanley Cup Winner 2021/2022',
+    active: true,
+    has_outrights: true
+  },
+  {
+    key: 'icehockey_sweden_allsvenskan',
+    group: 'Ice Hockey',
+    title: 'HockeyAllsvenskan',
+    description: 'Swedish Hockey Allsvenskan',
+    active: true,
+    has_outrights: false
+  },
+  {
+    key: 'mma_mixed_martial_arts',
+    group: 'Mixed Martial Arts',
+    title: 'MMA',
+    description: 'Mixed Martial Arts',
+    active: true,
+    has_outrights: false
+  },
+  {
+    key: 'rugbyleague_nrl',
+    group: 'Rugby League',
+    title: 'NRL',
+    description: 'Aussie Rugby League',
+    active: true,
+    has_outrights: false
+  },
+  {
+    key: 'soccer_africa_cup_of_nations',
+    group: 'Soccer',
+    title: 'Africa Cup of Nations',
+    description: 'Africa Cup of Nations',
+    active: true,
+    has_outrights: false
+  },
+  {
+    key: 'soccer_belgium_first_div',
+    group: 'Soccer',
+    title: 'Belgium First Div',
+    description: 'Belgian First Division A',
+    active: true,
+    has_outrights: false
+  },
+  {
+    key: 'soccer_denmark_superliga',
+    group: 'Soccer',
+    title: 'Denmark Superliga',
+    description: '',
+    active: true,
+    has_outrights: false
+  },
+  {
+    key: 'soccer_efl_champ',
+    group: 'Soccer',
+    title: 'Championship',
+    description: 'EFL Championship',
+    active: true,
+    has_outrights: false
+  },
+  {
+    key: 'soccer_england_efl_cup',
+    group: 'Soccer',
+    title: 'EFL Cup',
+    description: 'League Cup',
+    active: true,
+    has_outrights: false
+  },
+  {
+    key: 'soccer_england_league1',
+    group: 'Soccer',
+    title: 'League 1',
+    description: 'EFL League 1',
+    active: true,
+    has_outrights: false
+  },
+  {
+    key: 'soccer_england_league2',
+    group: 'Soccer',
+    title: 'League 2',
+    description: 'EFL League 2 ',
+    active: true,
+    has_outrights: false
+  },
+  {
+    key: 'soccer_epl',
+    group: 'Soccer',
+    title: 'EPL',
+    description: 'English Premier League',
+    active: true,
+    has_outrights: false
+  },
+  {
+    key: 'soccer_france_ligue_one',
+    group: 'Soccer',
+    title: 'Ligue 1 - France',
+    description: '',
+    active: true,
+    has_outrights: false
+  },
+  {
+    key: 'soccer_france_ligue_two',
+    group: 'Soccer',
+    title: 'Ligue 2 - France',
+    description: 'French Soccer',
+    active: true,
+    has_outrights: false
+  },
+  {
+    key: 'soccer_germany_bundesliga',
+    group: 'Soccer',
+    title: 'Bundesliga - Germany',
+    description: 'German Soccer',
+    active: true,
+    has_outrights: false
+  },
+  {
+    key: 'soccer_germany_bundesliga2',
+    group: 'Soccer',
+    title: 'Bundesliga 2 - Germany',
+    description: 'German Soccer',
+    active: true,
+    has_outrights: false
+  },
+  {
+    key: 'soccer_italy_serie_a',
+    group: 'Soccer',
+    title: 'Serie A - Italy',
+    description: 'Italian Soccer',
+    active: true,
+    has_outrights: false
+  },
+  {
+    key: 'soccer_italy_serie_b',
+    group: 'Soccer',
+    title: 'Serie B - Italy',
+    description: 'Italian Soccer',
+    active: true,
+    has_outrights: false
+  },
+  {
+    key: 'soccer_mexico_ligamx',
+    group: 'Soccer',
+    title: 'Liga MX',
+    description: 'Mexican Soccer',
+    active: true,
+    has_outrights: false
+  },
+  {
+    key: 'soccer_netherlands_eredivisie',
+    group: 'Soccer',
+    title: 'Dutch Eredivisie',
+    description: 'Dutch Soccer',
+    active: true,
+    has_outrights: false
+  },
+  {
+    key: 'soccer_portugal_primeira_liga',
+    group: 'Soccer',
+    title: 'Primeira Liga - Portugal',
+    description: 'Portugese Soccer',
+    active: true,
+    has_outrights: false
+  },
+  {
+    key: 'soccer_russia_premier_league',
+    group: 'Soccer',
+    title: 'Premier League - Russia',
+    description: 'Russian Soccer',
+    active: true,
+    has_outrights: false
+  },
+  {
+    key: 'soccer_spain_la_liga',
+    group: 'Soccer',
+    title: 'La Liga - Spain',
+    description: 'Spanish Soccer',
+    active: true,
+    has_outrights: false
+  },
+  {
+    key: 'soccer_spain_segunda_division',
+    group: 'Soccer',
+    title: 'La Liga 2 - Spain',
+    description: 'Spanish Soccer',
+    active: true,
+    has_outrights: false
+  },
+  {
+    key: 'soccer_spl',
+    group: 'Soccer',
+    title: 'Premiership - Scotland',
+    description: 'Scottish Premiership',
+    active: true,
+    has_outrights: false
+  },
+  {
+    key: 'soccer_switzerland_superleague',
+    group: 'Soccer',
+    title: 'Swiss Superleague',
+    description: 'Swiss Soccer',
+    active: true,
+    has_outrights: false
+  },
+  {
+    key: 'soccer_turkey_super_league',
+    group: 'Soccer',
+    title: 'Turkey Super League',
+    description: 'Turkish Soccer',
+    active: true,
+    has_outrights: false
+  },
+  {
+    key: 'soccer_uefa_champs_league',
+    group: 'Soccer',
+    title: 'UEFA Champions',
+    description: 'European Champions League',
+    active: true,
+    has_outrights: false
+  },
+  {
+    key: 'soccer_uefa_europa_league',
+    group: 'Soccer',
+    title: 'UEFA Europa',
+    description: 'European Europa League',
+    active: true,
+    has_outrights: false
+  },
+  {
+    key: 'tennis_atp_aus_open_singles',
+    group: 'Tennis',
+    title: 'ATP Australian Open',
+    description: "Men's Singles",
+    active: true,
+    has_outrights: false
+  },
+  {
+    key: 'tennis_wta_aus_open_singles',
+    group: 'Tennis',
+    title: 'WTA Australian Open',
+    description: "Women's Singles",
+    active: true,
+    has_outrights: false
+  }
+]
+[{"id":"235551bb746e08e368056ea878affe9b","sport_key":"soccer_epl","sport_title":"EPL","commence_time":"2022-01-18T20:00:05Z","home_team":"Brighton and Hove Albion","away_team":"Chelsea","bookmakers":[{"key":"fanduel","title":"FanDuel","last_update":"2022-01-18T21:50:32Z","markets":[{"key":"h2h","outcomes":[{"name":"Brighton and Hove Albion","price":4100},{"name":"Chelsea","price":1400},{"name":"Draw","price":-1900}]}]},{"key":"pointsbetus","title":"PointsBet (US)","last_update":"2022-01-18T21:50:32Z","markets":[{"key":"h2h","outcomes":[{"name":"Brighton and Hove Albion","price":6000},{"name":"Chelsea","price":4000},{"name":"Draw","price":-10000}]}]},{"key":"draftkings","title":"DraftKings","last_update":"2022-01-18T21:50:34Z","markets":[{"key":"h2h","outcomes":[{"name":"Brighton and Hove Albion","price":3000},{"name":"Chelsea","price":1000},{"name":"Draw","price":-1800}]}]},{"key":"mybookieag","title":"MyBookie.ag","last_update":"2022-01-18T21:56:10Z","markets":[{"key":"h2h","outcomes":[{"name":"Brighton and Hove Albion","price":639},{"name":"Chelsea","price":224},{"name":"Draw","price":-175}]}]},{"key":"betfair","title":"Betfair","last_update":"2022-01-18T21:52:07Z","markets":[{"key":"h2h","outcomes":[{"name":"Brighton and Hove Albion","price":4700},{"name":"Chelsea","price":1450},{"name":"Draw","price":-1429}]},{"key":"h2h_lay","outcomes":[{"name":"Brighton and Hove Albion","price":19900},{"name":"Chelsea","price":1800},{"name":"Draw","price":-1250}]}]},{"key":"williamhill_us","title":"William Hill (US)","last_update":"2022-01-18T21:50:31Z","markets":[{"key":"h2h","outcomes":[{"name":"Brighton and Hove Albion","price":1900},{"name":"Chelsea","price":1200},{"name":"Draw","price":-1600}]}]},{"key":"foxbet","title":"FOX Bet","last_update":"2022-01-18T21:52:15Z","markets":[{"key":"h2h","outcomes":[{"name":"Brighton and Hove Albion","price":475},{"name":"Chelsea","price":210},{"name":"Draw","price":-143}]}]},{"key":"bovada","title":"Bovada","last_update":"2022-01-18T21:50:30Z","markets":[{"key":"h2h","outcomes":[{"name":"Brighton and Hove Albion","price":1800},{"name":"Chelsea","price":1000},{"name":"Draw","price":-2500}]}]},{"key":"sugarhouse","title":"SugarHouse","last_update":"2022-01-18T21:49:05Z","markets":[{"key":"h2h","outcomes":[{"name":"Brighton and Hove Albion","price":2200},{"name":"Chelsea","price":1400},{"name":"Draw","price":-1667}]}]},{"key":"barstool","title":"Barstool Sportsbook","last_update":"2022-01-18T21:49:03Z","markets":[{"key":"h2h","outcomes":[{"name":"Brighton and Hove Albion","price":2200},{"name":"Chelsea","price":1400},{"name":"Draw","price":-1430}]}]},{"key":"twinspires","title":"TwinSpires","last_update":"2022-01-18T21:49:04Z","markets":[{"key":"h2h","outcomes":[{"name":"Brighton and Hove Albion","price":2200},{"name":"Chelsea","price":1400},{"name":"Draw","price":-1667}]}]},{"key":"unibet","title":"Unibet","last_update":"2022-01-18T21:48:55Z","markets":[{"key":"h2h","outcomes":[{"name":"Brighton and Hove Albion","price":2200},{"name":"Chelsea","price":1200},{"name":"Draw","price":-1429}]}]}]},{"id":"cafd3ebc1c094fef2714a0ab5c0e1332","sport_key":"soccer_spain_la_liga","sport_title":"La Liga - Spain","commence_time":"2022-01-18T20:31:19Z","home_team":"Cádiz CF","away_team":"Espanyol","bookmakers":[{"key":"fanduel","title":"FanDuel","last_update":"2022-01-18T21:57:18Z","markets":[{"key":"h2h","outcomes":[{"name":"Cádiz CF","price":410},{"name":"Espanyol","price":240},{"name":"Draw","price":-135}]}]},{"key":"draftkings","title":"DraftKings","last_update":"2022-01-18T21:57:18Z","markets":[{"key":"h2h","outcomes":[{"name":"Cádiz CF","price":475},{"name":"Espanyol","price":200},{"name":"Draw","price":-130}]}]},{"key":"betfair","title":"Betfair","last_update":"2022-01-18T21:57:12Z","markets":[{"key":"h2h","outcomes":[{"name":"Cádiz CF","price":480},{"name":"Espanyol","price":245},{"name":"Draw","price":-119}]},{"key":"h2h_lay","outcomes":[{"name":"Cádiz CF","price":490},{"name":"Espanyol","price":255},{"name":"Draw","price":-118}]}]},{"key":"pointsbetus","title":"PointsBet (US)","last_update":"2022-01-18T21:57:18Z","markets":[{"key":"h2h","outcomes":[{"name":"Cádiz CF","price":440},{"name":"Espanyol","price":220},{"name":"Draw","price":-145}]}]},{"key":"bovada","title":"Bovada","last_update":"2022-01-18T21:57:18Z","markets":[{"key":"h2h","outcomes":[{"name":"Cádiz CF","price":400},{"name":"Espanyol","price":225},{"name":"Draw","price":-136}]}]},{"key":"foxbet","title":"FOX Bet","last_update":"2022-01-18T21:57:18Z","markets":[{"key":"h2h","outcomes":[{"name":"Cádiz CF","price":370},{"name":"Espanyol","price":215},{"name":"Draw","price":-125}]}]},{"key":"betmgm","title":"BetMGM","last_update":"2022-01-18T21:57:22Z","markets":[{"key":"h2h","outcomes":[{"name":"Cádiz CF","price":375},{"name":"Espanyol","price":230},{"name":"Draw","price":-130}]}]},{"key":"twinspires","title":"TwinSpires","last_update":"2022-01-18T21:57:21Z","markets":[{"key":"h2h","outcomes":[{"name":"Cádiz CF","price":450},{"name":"Espanyol","price":225},{"name":"Draw","price":-139}]}]},{"key":"barstool","title":"Barstool Sportsbook","last_update":"2022-01-18T21:57:23Z","markets":[{"key":"h2h","outcomes":[{"name":"Cádiz CF","price":450},{"name":"Espanyol","price":225},{"name":"Draw","price":-139}]}]},{"key":"sugarhouse","title":"SugarHouse","last_update":"2022-01-18T21:57:20Z","markets":[{"key":"h2h","outcomes":[{"name":"Cádiz CF","price":450},{"name":"Espanyol","price":225},{"name":"Draw","price":-139}]}]},{"key":"unibet","title":"Unibet","last_update":"2022-01-18T21:57:13Z","markets":[{"key":"h2h","outcomes":[{"name":"Cádiz CF","price":450},{"name":"Espanyol","price":225},{"name":"Draw","price":-139}]}]}]},{"id":"e7f6b199cdfa5400cad448509058975b","sport_key":"basketball_ncaab","sport_title":"NCAAB","commence_time":"2022-01-18T22:00:00Z","home_team":"West Virginia Mountaineers","away_team":"Baylor Bears","bookmakers":[{"key":"unibet","title":"Unibet","last_update":"2022-01-18T21:56:16Z","markets":[{"key":"h2h","outcomes":[{"name":"Baylor Bears","price":-238},{"name":"West Virginia Mountaineers","price":175}]}]},{"key":"williamhill_us","title":"William Hill (US)","last_update":"2022-01-18T21:56:20Z","markets":[{"key":"h2h","outcomes":[{"name":"Baylor Bears","price":-220},{"name":"West Virginia Mountaineers","price":180}]}]},{"key":"fanduel","title":"FanDuel","last_update":"2022-01-18T21:56:21Z","markets":[{"key":"h2h","outcomes":[{"name":"Baylor Bears","price":-230},{"name":"West Virginia Mountaineers","price":188}]}]},{"key":"pointsbetus","title":"PointsBet (US)","last_update":"2022-01-18T21:56:21Z","markets":[{"key":"h2h","outcomes":[{"name":"Baylor Bears","price":-221},{"name":"West Virginia Mountaineers","price":175}]}]},{"key":"bovada","title":"Bovada","last_update":"2022-01-18T21:56:22Z","markets":[{"key":"h2h","outcomes":[{"name":"Baylor Bears","price":-220},{"name":"West Virginia Mountaineers","price":180}]}]},{"key":"betus","title":"BetUS","last_update":"2022-01-18T21:56:22Z","markets":[{"key":"h2h","outcomes":[{"name":"Baylor Bears","price":-225},{"name":"West Virginia Mountaineers","price":185}]}]},{"key":"betmgm","title":"BetMGM","last_update":"2022-01-18T21:56:23Z","markets":[{"key":"h2h","outcomes":[{"name":"Baylor Bears","price":-200},{"name":"West Virginia Mountaineers","price":165}]}]},{"key":"sugarhouse","title":"SugarHouse","last_update":"2022-01-18T21:56:23Z","markets":[{"key":"h2h","outcomes":[{"name":"Baylor Bears","price":-220},{"name":"West Virginia Mountaineers","price":180}]}]},{"key":"twinspires","title":"TwinSpires","last_update":"2022-01-18T21:56:23Z","markets":[{"key":"h2h","outcomes":[{"name":"Baylor Bears","price":-225},{"name":"West Virginia Mountaineers","price":180}]}]},{"key":"wynnbet","title":"WynnBET","last_update":"2022-01-18T21:56:24Z","markets":[{"key":"h2h","outcomes":[{"name":"Baylor Bears","price":-222},{"name":"West Virginia Mountaineers","price":175}]}]},{"key":"barstool","title":"Barstool Sportsbook","last_update":"2022-01-18T21:56:23Z","markets":[{"key":"h2h","outcomes":[{"name":"Baylor Bears","price":-220},{"name":"West Virginia Mountaineers","price":180}]}]},{"key":"draftkings","title":"DraftKings","last_update":"2022-01-18T21:56:27Z","markets":[{"key":"h2h","outcomes":[{"name":"Baylor Bears","price":-225},{"name":"West Virginia Mountaineers","price":185}]}]},{"key":"gtbets","title":"GTbets","last_update":"2022-01-18T21:56:22Z","markets":[{"key":"h2h","outcomes":[{"name":"Baylor Bears","price":-225},{"name":"West Virginia Mountaineers","price":190}]}]},{"key":"betrivers","title":"BetRivers","last_update":"2022-01-18T21:56:26Z","markets":[{"key":"h2h","outcomes":[{"name":"Baylor Bears","price":-220},{"name":"West Virginia Mountaineers","price":180}]}]},{"key":"mybookieag","title":"MyBookie.ag","last_update":"2022-01-18T21:54:39Z","markets":[{"key":"h2h","outcomes":[{"name":"Baylor Bears","price":-300},{"name":"West Virginia Mountaineers","price":245}]}]}]},{"id":"fc9a4acc9179328aab0654723059614c","sport_key":"basketball_ncaab","sport_title":"NCAAB","commence_time":"2022-01-18T23:00:00Z","home_team":"Akron Zips","away_team":"Western Michigan Broncos","bookmakers":[{"key":"williamhill_us","title":"William Hill (US)","last_update":"2022-01-18T21:56:20Z","markets":[{"key":"h2h","outcomes":[{"name":"Akron Zips","price":-1600},{"name":"Western Michigan Broncos","price":850}]}]},{"key":"bovada","title":"Bovada","last_update":"2022-01-18T21:56:22Z","markets":[{"key":"h2h","outcomes":[{"name":"Akron Zips","price":-1500},{"name":"Western Michigan Broncos","price":775}]}]},{"key":"foxbet","title":"FOX Bet","last_update":"2022-01-18T21:56:21Z","markets":[{"key":"h2h","outcomes":[{"name":"Akron Zips","price":-1429},{"name":"Western Michigan Broncos","price":700}]}]},{"key":"pointsbetus","title":"PointsBet (US)","last_update":"2022-01-18T21:56:21Z","markets":[{"key":"h2h","outcomes":[{"name":"Akron Zips","price":-1350},{"name":"Western Michigan Broncos","price":825}]}]},{"key":"wynnbet","title":"WynnBET","last_update":"2022-01-18T21:56:24Z","markets":[{"key":"h2h","outcomes":[{"name":"Akron Zips","price":-1429},{"name":"Western Michigan Broncos","price":825}]}]},{"key":"betmgm","title":"BetMGM","last_update":"2022-01-18T21:56:23Z","markets":[{"key":"h2h","outcomes":[{"name":"Akron Zips","price":-1200},{"name":"Western Michigan Broncos","price":725}]}]},{"key":"draftkings","title":"DraftKings","last_update":"2022-01-18T21:56:27Z","markets":[{"key":"h2h","outcomes":[{"name":"Akron Zips","price":-1500},{"name":"Western Michigan Broncos","price":850}]}]},{"key":"fanduel","title":"FanDuel","last_update":"2022-01-18T21:56:21Z","markets":[{"key":"h2h","outcomes":[{"name":"Akron Zips","price":-1700},{"name":"Western Michigan Broncos","price":890}]}]},{"key":"betus","title":"BetUS","last_update":"2022-01-18T21:56:22Z","markets":[{"key":"h2h","outcomes":[{"name":"Akron Zips","price":-1410},{"name":"Western Michigan Broncos","price":810}]}]},{"key":"unibet","title":"Unibet","last_update":"2022-01-18T21:56:16Z","markets":[{"key":"h2h","outcomes":[{"name":"Akron Zips","price":-3333},{"name":"Western Michigan Broncos","price":850}]}]},{"key":"sugarhouse","title":"SugarHouse","last_update":"2022-01-18T21:56:23Z","markets":[{"key":"h2h","outcomes":[{"name":"Akron Zips","price":-1430},{"name":"Western Michigan Broncos","price":850}]}]},{"key":"twinspires","title":"TwinSpires","last_update":"2022-01-18T21:56:23Z","markets":[{"key":"h2h","outcomes":[{"name":"Akron Zips","price":-2000},{"name":"Western Michigan Broncos","price":850}]}]},{"key":"barstool","title":"Barstool Sportsbook","last_update":"2022-01-18T21:56:23Z","markets":[{"key":"h2h","outcomes":[{"name":"Akron Zips","price":-1430},{"name":"Western Michigan Broncos","price":850}]}]},{"key":"gtbets","title":"GTbets","last_update":"2022-01-18T21:56:22Z","markets":[{"key":"h2h","outcomes":[{"name":"Akron Zips","price":-1410},{"name":"Western Michigan Broncos","price":860}]}]},{"key":"betrivers","title":"BetRivers","last_update":"2022-01-18T21:56:26Z","markets":[{"key":"h2h","outcomes":[{"name":"Akron Zips","price":-1430},{"name":"Western Michigan Broncos","price":850}]}]},{"key":"mybookieag","title":"MyBookie.ag","last_update":"2022-01-18T21:54:39Z","markets":[{"key":"h2h","outcomes":[{"name":"Akron Zips","price":-1450},{"name":"Western Michigan Broncos","price":850}]}]}]},{"id":"b884eaabd202f9f54f7190eaeed48b69","sport_key":"basketball_ncaab","sport_title":"NCAAB","commence_time":"2022-01-19T00:00:00Z","home_team":"Arkansas Razorbacks","away_team":"South Carolina Gamecocks","bookmakers":[{"key":"unibet","title":"Unibet","last_update":"2022-01-18T21:56:16Z","markets":[{"key":"h2h","outcomes":[{"name":"Arkansas Razorbacks","price":-1000},{"name":"South Carolina Gamecocks","price":475}]}]},{"key":"williamhill_us","title":"William Hill (US)","last_update":"2022-01-18T21:56:20Z","markets":[{"key":"h2h","outcomes":[{"name":"Arkansas Razorbacks","price":-800},{"name":"South Carolina Gamecocks","price":550}]}]},{"key":"foxbet","title":"FOX Bet","last_update":"2022-01-18T21:56:21Z","markets":[{"key":"h2h","outcomes":[{"name":"Arkansas Razorbacks","price":-833},{"name":"South Carolina Gamecocks","price":500}]}]},{"key":"fanduel","title":"FanDuel","last_update":"2022-01-18T21:56:21Z","markets":[{"key":"h2h","outcomes":[{"name":"Arkansas Razorbacks","price":-880},{"name":"South Carolina Gamecocks","price":580}]}]},{"key":"sugarhouse","title":"SugarHouse","last_update":"2022-01-18T21:56:23Z","markets":[{"key":"h2h","outcomes":[{"name":"Arkansas Razorbacks","price":-715},{"name":"South Carolina Gamecocks","price":475}]}]},{"key":"betus","title":"BetUS","last_update":"2022-01-18T21:56:22Z","markets":[{"key":"h2h","outcomes":[{"name":"Arkansas Razorbacks","price":-755},{"name":"South Carolina Gamecocks","price":555}]}]},{"key":"pointsbetus","title":"PointsBet (US)","last_update":"2022-01-18T21:56:21Z","markets":[{"key":"h2h","outcomes":[{"name":"Arkansas Razorbacks","price":-751},{"name":"South Carolina Gamecocks","price":530}]}]},{"key":"bovada","title":"Bovada","last_update":"2022-01-18T21:56:22Z","markets":[{"key":"h2h","outcomes":[{"name":"Arkansas Razorbacks","price":-800},{"name":"South Carolina Gamecocks","price":525}]}]},{"key":"wynnbet","title":"WynnBET","last_update":"2022-01-18T21:56:24Z","markets":[{"key":"h2h","outcomes":[{"name":"Arkansas Razorbacks","price":-769},{"name":"South Carolina Gamecocks","price":530}]}]},{"key":"twinspires","title":"TwinSpires","last_update":"2022-01-18T21:56:23Z","markets":[{"key":"h2h","outcomes":[{"name":"Arkansas Razorbacks","price":-715},{"name":"South Carolina Gamecocks","price":475}]}]},{"key":"barstool","title":"Barstool Sportsbook","last_update":"2022-01-18T21:56:23Z","markets":[{"key":"h2h","outcomes":[{"name":"Arkansas Razorbacks","price":-715},{"name":"South Carolina Gamecocks","price":475}]}]},{"key":"betmgm","title":"BetMGM","last_update":"2022-01-18T21:56:23Z","markets":[{"key":"h2h","outcomes":[{"name":"Arkansas Razorbacks","price":-700},{"name":"South Carolina Gamecocks","price":500}]}]},{"key":"draftkings","title":"DraftKings","last_update":"2022-01-18T21:56:27Z","markets":[{"key":"h2h","outcomes":[{"name":"Arkansas Razorbacks","price":-760},{"name":"South Carolina Gamecocks","price":525}]}]},{"key":"gtbets","title":"GTbets","last_update":"2022-01-18T21:56:22Z","markets":[{"key":"h2h","outcomes":[{"name":"Arkansas Razorbacks","price":-775},{"name":"South Carolina Gamecocks","price":555}]}]},{"key":"betrivers","title":"BetRivers","last_update":"2022-01-18T21:56:26Z","markets":[{"key":"h2h","outcomes":[{"name":"Arkansas Razorbacks","price":-715},{"name":"South Carolina Gamecocks","price":475}]}]},{"key":"mybookieag","title":"MyBookie.ag","last_update":"2022-01-18T21:54:39Z","markets":[{"key":"h2h","outcomes":[{"name":"Arkansas Razorbacks","price":-900},{"name":"South Carolina Gamecocks","price":550}]}]}]},{"id":"08dc4e0c3b64cd14f4ebbf817471b62c","sport_key":"basketball_ncaab","sport_title":"NCAAB","commence_time":"2022-01-19T00:00:00Z","home_team":"Toledo Rockets","away_team":"Ball State Cardinals","bookmakers":[{"key":"williamhill_us","title":"William Hill (US)","last_update":"2022-01-18T21:56:20Z","markets":[{"key":"h2h","outcomes":[{"name":"Ball State Cardinals","price":650},{"name":"Toledo Rockets","price":-1000}]}]},{"key":"bovada","title":"Bovada","last_update":"2022-01-18T21:56:22Z","markets":[{"key":"h2h","outcomes":[{"name":"Ball State Cardinals","price":600},{"name":"Toledo Rockets","price":-950}]}]},{"key":"pointsbetus","title":"PointsBet (US)","last_update":"2022-01-18T21:56:21Z","markets":[{"key":"h2h","outcomes":[{"name":"Ball State Cardinals","price":610},{"name":"Toledo Rockets","price":-901}]}]},{"key":"wynnbet","title":"WynnBET","last_update":"2022-01-18T21:56:24Z","markets":[{"key":"h2h","outcomes":[{"name":"Ball State Cardinals","price":610},{"name":"Toledo Rockets","price":-909}]}]},{"key":"betmgm","title":"BetMGM","last_update":"2022-01-18T21:56:23Z","markets":[{"key":"h2h","outcomes":[{"name":"Ball State Cardinals","price":600},{"name":"Toledo Rockets","price":-900}]}]},{"key":"draftkings","title":"DraftKings","last_update":"2022-01-18T21:56:27Z","markets":[{"key":"h2h","outcomes":[{"name":"Ball State Cardinals","price":600},{"name":"Toledo Rockets","price":-900}]}]},{"key":"fanduel","title":"FanDuel","last_update":"2022-01-18T21:56:21Z","markets":[{"key":"h2h","outcomes":[{"name":"Ball State Cardinals","price":640},{"name":"Toledo Rockets","price":-1000}]}]},{"key":"unibet","title":"Unibet","last_update":"2022-01-18T21:56:16Z","markets":[{"key":"h2h","outcomes":[{"name":"Ball State Cardinals","price":550},{"name":"Toledo Rockets","price":-1111}]}]},{"key":"barstool","title":"Barstool Sportsbook","last_update":"2022-01-18T21:56:23Z","markets":[{"key":"h2h","outcomes":[{"name":"Ball State Cardinals","price":600},{"name":"Toledo Rockets","price":-1000}]}]},{"key":"sugarhouse","title":"SugarHouse","last_update":"2022-01-18T21:56:23Z","markets":[{"key":"h2h","outcomes":[{"name":"Ball State Cardinals","price":600},{"name":"Toledo Rockets","price":-1000}]}]},{"key":"twinspires","title":"TwinSpires","last_update":"2022-01-18T21:56:23Z","markets":[{"key":"h2h","outcomes":[{"name":"Ball State Cardinals","price":600},{"name":"Toledo Rockets","price":-1000}]}]},{"key":"gtbets","title":"GTbets","last_update":"2022-01-18T21:56:22Z","markets":[{"key":"h2h","outcomes":[{"name":"Ball State Cardinals","price":670},{"name":"Toledo Rockets","price":-890}]}]},{"key":"betrivers","title":"BetRivers","last_update":"2022-01-18T21:56:26Z","markets":[{"key":"h2h","outcomes":[{"name":"Ball State Cardinals","price":600},{"name":"Toledo Rockets","price":-1000}]}]},{"key":"mybookieag","title":"MyBookie.ag","last_update":"2022-01-18T21:54:39Z","markets":[{"key":"h2h","outcomes":[{"name":"Ball State Cardinals","price":650},{"name":"Toledo Rockets","price":-1100}]}]}]},{"id":"80f7528a1c47db23fc62dded2c0c5303","sport_key":"icehockey_nhl","sport_title":"NHL","commence_time":"2022-01-19T00:00:00Z","home_team":"Ottawa Senators","away_team":"Buffalo Sabres","bookmakers":[{"key":"foxbet","title":"FOX Bet","last_update":"2022-01-18T21:56:56Z","markets":[{"key":"h2h","outcomes":[{"name":"Buffalo Sabres","price":170},{"name":"Ottawa Senators","price":-227}]}]},{"key":"fanduel","title":"FanDuel","last_update":"2022-01-18T21:56:55Z","markets":[{"key":"h2h","outcomes":[{"name":"Buffalo Sabres","price":184},{"name":"Ottawa Senators","price":-220}]}]},{"key":"betfair","title":"Betfair","last_update":"2022-01-18T21:56:51Z","markets":[{"key":"h2h","outcomes":[{"name":"Buffalo Sabres","price":200},{"name":"Ottawa Senators","price":-213}]},{"key":"h2h_lay","outcomes":[{"name":"Buffalo Sabres","price":210},{"name":"Ottawa Senators","price":-204}]}]},{"key":"betrivers","title":"BetRivers","last_update":"2022-01-18T21:56:57Z","markets":[{"key":"h2h","outcomes":[{"name":"Buffalo Sabres","price":188},{"name":"Ottawa Senators","price":-225}]}]},{"key":"barstool","title":"Barstool Sportsbook","last_update":"2022-01-18T21:56:57Z","markets":[{"key":"h2h","outcomes":[{"name":"Buffalo Sabres","price":185},{"name":"Ottawa Senators","price":-230}]}]},{"key":"sugarhouse","title":"SugarHouse","last_update":"2022-01-18T21:56:58Z","markets":[{"key":"h2h","outcomes":[{"name":"Buffalo Sabres","price":188},{"name":"Ottawa Senators","price":-225}]}]},{"key":"unibet","title":"Unibet","last_update":"2022-01-18T21:56:52Z","markets":[{"key":"h2h","outcomes":[{"name":"Buffalo Sabres","price":185},{"name":"Ottawa Senators","price":-227}]}]},{"key":"twinspires","title":"TwinSpires","last_update":"2022-01-18T21:56:58Z","markets":[{"key":"h2h","outcomes":[{"name":"Buffalo Sabres","price":185},{"name":"Ottawa Senators","price":-230}]}]},{"key":"draftkings","title":"DraftKings","last_update":"2022-01-18T21:56:56Z","markets":[{"key":"h2h","outcomes":[{"name":"Buffalo Sabres","price":185},{"name":"Ottawa Senators","price":-220}]}]},{"key":"betmgm","title":"BetMGM","last_update":"2022-01-18T21:55:07Z","markets":[{"key":"h2h","outcomes":[{"name":"Buffalo Sabres","price":180},{"name":"Ottawa Senators","price":-225}]}]},{"key":"bovada","title":"Bovada","last_update":"2022-01-18T21:56:56Z","markets":[{"key":"h2h","outcomes":[{"name":"Buffalo Sabres","price":190},{"name":"Ottawa Senators","price":-230}]}]},{"key":"wynnbet","title":"WynnBET","last_update":"2022-01-18T21:56:58Z","markets":[{"key":"h2h","outcomes":[{"name":"Buffalo Sabres","price":185},{"name":"Ottawa Senators","price":-222}]}]},{"key":"lowvig","title":"LowVig.ag","last_update":"2022-01-18T21:56:56Z","markets":[{"key":"h2h","outcomes":[{"name":"Buffalo Sabres","price":192},{"name":"Ottawa Senators","price":-214}]}]},{"key":"betonlineag","title":"BetOnline.ag","last_update":"2022-01-18T21:56:54Z","markets":[{"key":"h2h","outcomes":[{"name":"Buffalo Sabres","price":192},{"name":"Ottawa Senators","price":-217}]}]},{"key":"williamhill_us","title":"William Hill (US)","last_update":"2022-01-18T21:56:55Z","markets":[{"key":"h2h","outcomes":[{"name":"Buffalo Sabres","price":190},{"name":"Ottawa Senators","price":-230}]}]},{"key":"gtbets","title":"GTbets","last_update":"2022-01-18T21:56:56Z","markets":[{"key":"h2h","outcomes":[{"name":"Buffalo Sabres","price":195},{"name":"Ottawa Senators","price":-225}]}]},{"key":"pointsbetus","title":"PointsBet (US)","last_update":"2022-01-18T21:56:56Z","markets":[{"key":"h2h","outcomes":[{"name":"Buffalo Sabres","price":180},{"name":"Ottawa Senators","price":-226}]}]},{"key":"betus","title":"BetUS","last_update":"2022-01-18T21:56:57Z","markets":[{"key":"h2h","outcomes":[{"name":"Buffalo Sabres","price":185},{"name":"Ottawa Senators","price":-225}]}]},{"key":"intertops","title":"Intertops","last_update":"2022-01-18T21:55:06Z","markets":[{"key":"h2h","outcomes":[{"name":"Buffalo Sabres","price":185},{"name":"Ottawa Senators","price":-225}]}]},{"key":"mybookieag","title":"MyBookie.ag","last_update":"2022-01-18T21:56:56Z","markets":[{"key":"h2h","outcomes":[{"name":"Buffalo Sabres","price":175},{"name":"Ottawa Senators","price":-235}]}]}]},{"id":"e0a9fd9e84c188a8c36739023c3f55db","sport_key":"basketball_ncaab","sport_title":"NCAAB","commence_time":"2022-01-19T00:00:00Z","home_team":"UConn Huskies","away_team":"Butler Bulldogs","bookmakers":[{"key":"unibet","title":"Unibet","last_update":"2022-01-18T21:56:16Z","markets":[{"key":"h2h","outcomes":[{"name":"Butler Bulldogs","price":650},{"name":"UConn Huskies","price":-1667}]}]},{"key":"williamhill_us","title":"William Hill (US)","last_update":"2022-01-18T21:56:20Z","markets":[{"key":"h2h","outcomes":[{"name":"Butler Bulldogs","price":700},{"name":"UConn Huskies","price":-1100}]}]},{"key":"fanduel","title":"FanDuel","last_update":"2022-01-18T21:56:21Z","markets":[{"key":"h2h","outcomes":[{"name":"Butler Bulldogs","price":760},{"name":"UConn Huskies","price":-1300}]}]},{"key":"sugarhouse","title":"SugarHouse","last_update":"2022-01-18T21:56:23Z","markets":[{"key":"h2h","outcomes":[{"name":"Butler Bulldogs","price":650},{"name":"UConn Huskies","price":-1250}]}]},{"key":"betus","title":"BetUS","last_update":"2022-01-18T21:56:22Z","markets":[{"key":"h2h","outcomes":[{"name":"Butler Bulldogs","price":690},{"name":"UConn Huskies","price":-940}]}]},{"key":"pointsbetus","title":"PointsBet (US)","last_update":"2022-01-18T21:56:21Z","markets":[{"key":"h2h","outcomes":[{"name":"Butler Bulldogs","price":650},{"name":"UConn Huskies","price":-975}]}]},{"key":"wynnbet","title":"WynnBET","last_update":"2022-01-18T21:56:24Z","markets":[{"key":"h2h","outcomes":[{"name":"Butler Bulldogs","price":650},{"name":"UConn Huskies","price":-1000}]}]},{"key":"twinspires","title":"TwinSpires","last_update":"2022-01-18T21:56:23Z","markets":[{"key":"h2h","outcomes":[{"name":"Butler Bulldogs","price":650},{"name":"UConn Huskies","price":-1250}]}]},{"key":"barstool","title":"Barstool Sportsbook","last_update":"2022-01-18T21:56:23Z","markets":[{"key":"h2h","outcomes":[{"name":"Butler Bulldogs","price":650},{"name":"UConn Huskies","price":-1250}]}]},{"key":"betmgm","title":"BetMGM","last_update":"2022-01-18T21:56:23Z","markets":[{"key":"h2h","outcomes":[{"name":"Butler Bulldogs","price":625},{"name":"UConn Huskies","price":-1000}]}]},{"key":"draftkings","title":"DraftKings","last_update":"2022-01-18T21:56:27Z","markets":[{"key":"h2h","outcomes":[{"name":"Butler Bulldogs","price":650},{"name":"UConn Huskies","price":-1000}]}]},{"key":"gtbets","title":"GTbets","last_update":"2022-01-18T21:56:22Z","markets":[{"key":"h2h","outcomes":[{"name":"Butler Bulldogs","price":675},{"name":"UConn Huskies","price":-950}]}]},{"key":"betrivers","title":"BetRivers","last_update":"2022-01-18T21:56:26Z","markets":[{"key":"h2h","outcomes":[{"name":"Butler Bulldogs","price":650},{"name":"UConn Huskies","price":-1250}]}]},{"key":"mybookieag","title":"MyBookie.ag","last_update":"2022-01-18T21:54:39Z","markets":[{"key":"h2h","outcomes":[{"name":"Butler Bulldogs","price":650},{"name":"UConn Huskies","price":-1100}]}]}]},{"id":"3f0e1621dcf3c66cdb45979bfa4d3d80","sport_key":"tennis_wta_aus_open_singles","sport_title":"WTA Australian Open","commence_time":"2022-01-19T00:00:00Z","home_team":"Tereza Martincová","away_team":"Camila Giorgi","bookmakers":[{"key":"fanduel","title":"FanDuel","last_update":"2022-01-18T21:57:31Z","markets":[{"key":"h2h","outcomes":[{"name":"Camila Giorgi","price":-205},{"name":"Tereza Martincová","price":172}]}]},{"key":"draftkings","title":"DraftKings","last_update":"2022-01-18T21:57:29Z","markets":[{"key":"h2h","outcomes":[{"name":"Camila Giorgi","price":-200},{"name":"Tereza Martincová","price":165}]}]},{"key":"betmgm","title":"BetMGM","last_update":"2022-01-18T21:57:32Z","markets":[{"key":"h2h","outcomes":[{"name":"Camila Giorgi","price":-200},{"name":"Tereza Martincová","price":155}]}]},{"key":"unibet","title":"Unibet","last_update":"2022-01-18T21:55:29Z","markets":[{"key":"h2h","outcomes":[{"name":"Camila Giorgi","price":-200},{"name":"Tereza Martincová","price":160}]}]},{"key":"betrivers","title":"BetRivers","last_update":"2022-01-18T21:55:38Z","markets":[{"key":"h2h","outcomes":[{"name":"Camila Giorgi","price":-200},{"name":"Tereza Martincová","price":160}]}]},{"key":"twinspires","title":"TwinSpires","last_update":"2022-01-18T21:54:14Z","markets":[{"key":"h2h","outcomes":[{"name":"Camila Giorgi","price":-200},{"name":"Tereza Martincová","price":160}]}]},{"key":"barstool","title":"Barstool Sportsbook","last_update":"2022-01-18T21:57:31Z","markets":[{"key":"h2h","outcomes":[{"name":"Camila Giorgi","price":-200},{"name":"Tereza Martincová","price":160}]}]},{"key":"sugarhouse","title":"SugarHouse","last_update":"2022-01-18T21:57:32Z","markets":[{"key":"h2h","outcomes":[{"name":"Camila Giorgi","price":-200},{"name":"Tereza Martincová","price":160}]}]},{"key":"intertops","title":"Intertops","last_update":"2022-01-18T21:55:32Z","markets":[{"key":"h2h","outcomes":[{"name":"Camila Giorgi","price":-200},{"name":"Tereza Martincová","price":155}]}]},{"key":"gtbets","title":"GTbets","last_update":"2022-01-18T21:55:35Z","markets":[{"key":"h2h","outcomes":[{"name":"Camila Giorgi","price":-206},{"name":"Tereza Martincová","price":159}]}]},{"key":"wynnbet","title":"WynnBET","last_update":"2022-01-18T21:57:33Z","markets":[{"key":"h2h","outcomes":[{"name":"Camila Giorgi","price":-200},{"name":"Tereza Martincová","price":160}]}]},{"key":"betfair","title":"Betfair","last_update":"2022-01-18T21:55:30Z","markets":[{"key":"h2h","outcomes":[{"name":"Camila Giorgi","price":-189},{"name":"Tereza Martincová","price":180}]},{"key":"h2h_lay","outcomes":[{"name":"Camila Giorgi","price":-182},{"name":"Tereza Martincová","price":188}]}]},{"key":"foxbet","title":"FOX Bet","last_update":"2022-01-18T21:57:29Z","markets":[{"key":"h2h","outcomes":[{"name":"Camila Giorgi","price":-200},{"name":"Tereza Martincová","price":150}]}]},{"key":"mybookieag","title":"MyBookie.ag","last_update":"2022-01-18T21:55:35Z","markets":[{"key":"h2h","outcomes":[{"name":"Camila Giorgi","price":-212},{"name":"Tereza Martincová","price":163}]}]}]},{"id":"c8f78f3fa977812e8541dbd738d95aa2","sport_key":"basketball_ncaab","sport_title":"NCAAB","commence_time":"2022-01-19T00:00:00Z","home_team":"VCU Rams","away_team":"Davidson Wildcats","bookmakers":[{"key":"unibet","title":"Unibet","last_update":"2022-01-18T21:56:16Z","markets":[{"key":"h2h","outcomes":[{"name":"Davidson Wildcats","price":112},{"name":"VCU Rams","price":-149}]}]},{"key":"williamhill_us","title":"William Hill (US)","last_update":"2022-01-18T21:56:20Z","markets":[{"key":"h2h","outcomes":[{"name":"Davidson Wildcats","price":120},{"name":"VCU Rams","price":-140}]}]},{"key":"fanduel","title":"FanDuel","last_update":"2022-01-18T21:56:21Z","markets":[{"key":"h2h","outcomes":[{"name":"Davidson Wildcats","price":120},{"name":"VCU Rams","price":-144}]}]},{"key":"foxbet","title":"FOX Bet","last_update":"2022-01-18T21:56:21Z","markets":[{"key":"h2h","outcomes":[{"name":"Davidson 
+Wildcats","price":115},{"name":"VCU Rams","price":-149}]}]},{"key":"sugarhouse","title":"SugarHouse","last_update":"2022-01-18T21:56:23Z","markets":[{"key":"h2h","outcomes":[{"name":"Davidson Wildcats","price":118},{"name":"VCU Rams","price":-141}]}]},{"key":"twinspires","title":"TwinSpires","last_update":"2022-01-18T21:56:23Z","markets":[{"key":"h2h","outcomes":[{"name":"Davidson Wildcats","price":117},{"name":"VCU Rams","price":-141}]}]},{"key":"barstool","title":"Barstool Sportsbook","last_update":"2022-01-18T21:56:23Z","markets":[{"key":"h2h","outcomes":[{"name":"Davidson Wildcats","price":118},{"name":"VCU Rams","price":-141}]}]},{"key":"draftkings","title":"DraftKings","last_update":"2022-01-18T21:56:27Z","markets":[{"key":"h2h","outcomes":[{"name":"Davidson Wildcats","price":120},{"name":"VCU Rams","price":-140}]}]},{"key":"betrivers","title":"BetRivers","last_update":"2022-01-18T21:56:26Z","markets":[{"key":"h2h","outcomes":[{"name":"Davidson Wildcats","price":118},{"name":"VCU Rams","price":-141}]}]}]}]
+Remaining requests 499
+Used requests 1
+[
+  {
+    "id":"235551bb746e08e368056ea878affe9b",
+    "sport_key":"soccer_epl",
+    "sport_title":"EPL",
+    "commence_time":"2022-01-18T20:00:05Z",
+    "home_team":"Brighton and Hove Albion",
+    "away_team":"Chelsea",
+    "bookmakers":[
+      {
+        "key":"fanduel",
+        "title":"FanDuel",
+        "last_update":"2022-01-18T21:50:32Z",
+        "markets":[
+          {
+            "key":"h2h",
+            "outcomes":[
+              {
+                "name":"Brighton and Hove Albion",
+                "price":4100
+              },
+              {
+                "name":"Chelsea",
+                "price":1400
+              },
+              {
+                "name":"Draw",
+                "price":-1900
+              }
+            ]
+          }
+        ]
+      },{"key":"pointsbetus","title":"PointsBet (US)","last_update":"2022-01-18T21:50:32Z","markets":[{"key":"h2h","outcomes":[{"name":"Brighton and Hove Albion","price":6000},{"name":"Chelsea","price":4000},{"name":"Draw","price":-10000}]}]},{"key":"draftkings","title":"DraftKings","last_update":"2022-01-18T21:50:34Z","markets":[{"key":"h2h","outcomes":[{"name":"Brighton and Hove Albion","price":3000},{"name":"Chelsea","price":1000},{"name":"Draw","price":-1800}]}]},{"key":"mybookieag","title":"MyBookie.ag","last_update":"2022-01-18T21:56:10Z","markets":[{"key":"h2h","outcomes":[{"name":"Brighton and Hove Albion","price":639},{"name":"Chelsea","price":224},{"name":"Draw","price":-175}]}]},{"key":"betfair","title":"Betfair","last_update":"2022-01-18T21:52:07Z","markets":[{"key":"h2h","outcomes":[{"name":"Brighton and Hove Albion","price":4700},{"name":"Chelsea","price":1450},{"name":"Draw","price":-1429}]},{"key":"h2h_lay","outcomes":[{"name":"Brighton and Hove Albion","price":19900},{"name":"Chelsea","price":1800},{"name":"Draw","price":-1250}]}]},{"key":"williamhill_us","title":"William Hill (US)","last_update":"2022-01-18T21:50:31Z","markets":[{"key":"h2h","outcomes":[{"name":"Brighton and Hove Albion","price":1900},{"name":"Chelsea","price":1200},{"name":"Draw","price":-1600}]}]},{"key":"foxbet","title":"FOX Bet","last_update":"2022-01-18T21:52:15Z","markets":[{"key":"h2h","outcomes":[{"name":"Brighton and Hove Albion","price":475},{"name":"Chelsea","price":210},{"name":"Draw","price":-143}]}]},{"key":"bovada","title":"Bovada","last_update":"2022-01-18T21:50:30Z","markets":[{"key":"h2h","outcomes":[{"name":"Brighton and Hove Albion","price":1800},{"name":"Chelsea","price":1000},{"name":"Draw","price":-2500}]}]},{"key":"sugarhouse","title":"SugarHouse","last_update":"2022-01-18T21:49:05Z","markets":[{"key":"h2h","outcomes":[{"name":"Brighton and Hove Albion","price":2200},{"name":"Chelsea","price":1400},{"name":"Draw","price":-1667}]}]},{"key":"barstool","title":"Barstool Sportsbook","last_update":"2022-01-18T21:49:03Z","markets":[{"key":"h2h","outcomes":[{"name":"Brighton and Hove Albion","price":2200},{"name":"Chelsea","price":1400},{"name":"Draw","price":-1430}]}]},{"key":"twinspires","title":"TwinSpires","last_update":"2022-01-18T21:49:04Z","markets":[{"key":"h2h","outcomes":[{"name":"Brighton and Hove Albion","price":2200},{"name":"Chelsea","price":1400},{"name":"Draw","price":-1667}]}]},{"key":"unibet","title":"Unibet","last_update":"2022-01-18T21:48:55Z","markets":[{"key":"h2h","outcomes":[{"name":"Brighton and Hove Albion","price":2200},{"name":"Chelsea","price":1200},{"name":"Draw","price":-1429}]}]}]},{"id":"cafd3ebc1c094fef2714a0ab5c0e1332","sport_key":"soccer_spain_la_liga","sport_title":"La Liga - Spain","commence_time":"2022-01-18T20:31:19Z","home_team":"Cádiz CF","away_team":"Espanyol","bookmakers":[{"key":"fanduel","title":"FanDuel","last_update":"2022-01-18T21:57:18Z","markets":[{"key":"h2h","outcomes":[{"name":"Cádiz CF","price":410},{"name":"Espanyol","price":240},{"name":"Draw","price":-135}]}]},{"key":"draftkings","title":"DraftKings","last_update":"2022-01-18T21:57:18Z","markets":[{"key":"h2h","outcomes":[{"name":"Cádiz CF","price":475},{"name":"Espanyol","price":200},{"name":"Draw","price":-130}]}]},{"key":"betfair","title":"Betfair","last_update":"2022-01-18T21:57:12Z","markets":[{"key":"h2h","outcomes":[{"name":"Cádiz CF","price":480},{"name":"Espanyol","price":245},{"name":"Draw","price":-119}]},{"key":"h2h_lay","outcomes":[{"name":"Cádiz CF","price":490},{"name":"Espanyol","price":255},{"name":"Draw","price":-118}]}]},{"key":"pointsbetus","title":"PointsBet (US)","last_update":"2022-01-18T21:57:18Z","markets":[{"key":"h2h","outcomes":[{"name":"Cádiz CF","price":440},{"name":"Espanyol","price":220},{"name":"Draw","price":-145}]}]},{"key":"bovada","title":"Bovada","last_update":"2022-01-18T21:57:18Z","markets":[{"key":"h2h","outcomes":[{"name":"Cádiz CF","price":400},{"name":"Espanyol","price":225},{"name":"Draw","price":-136}]}]},{"key":"foxbet","title":"FOX Bet","last_update":"2022-01-18T21:57:18Z","markets":[{"key":"h2h","outcomes":[{"name":"Cádiz CF","price":370},{"name":"Espanyol","price":215},{"name":"Draw","price":-125}]}]},{"key":"betmgm","title":"BetMGM","last_update":"2022-01-18T21:57:22Z","markets":[{"key":"h2h","outcomes":[{"name":"Cádiz CF","price":375},{"name":"Espanyol","price":230},{"name":"Draw","price":-130}]}]},{"key":"twinspires","title":"TwinSpires","last_update":"2022-01-18T21:57:21Z","markets":[{"key":"h2h","outcomes":[{"name":"Cádiz CF","price":450},{"name":"Espanyol","price":225},{"name":"Draw","price":-139}]}]},{"key":"barstool","title":"Barstool Sportsbook","last_update":"2022-01-18T21:57:23Z","markets":[{"key":"h2h","outcomes":[{"name":"Cádiz CF","price":450},{"name":"Espanyol","price":225},{"name":"Draw","price":-139}]}]},{"key":"sugarhouse","title":"SugarHouse","last_update":"2022-01-18T21:57:20Z","markets":[{"key":"h2h","outcomes":[{"name":"Cádiz CF","price":450},{"name":"Espanyol","price":225},{"name":"Draw","price":-139}]}]},{"key":"unibet","title":"Unibet","last_update":"2022-01-18T21:57:13Z","markets":[{"key":"h2h","outcomes":[{"name":"Cádiz CF","price":450},{"name":"Espanyol","price":225},{"name":"Draw","price":-139}]}]}]},{"id":"e7f6b199cdfa5400cad448509058975b","sport_key":"basketball_ncaab","sport_title":"NCAAB","commence_time":"2022-01-18T22:00:00Z","home_team":"West Virginia Mountaineers","away_team":"Baylor Bears","bookmakers":[{"key":"unibet","title":"Unibet","last_update":"2022-01-18T21:56:16Z","markets":[{"key":"h2h","outcomes":[{"name":"Baylor Bears","price":-238},{"name":"West Virginia Mountaineers","price":175}]}]},{"key":"williamhill_us","title":"William Hill (US)","last_update":"2022-01-18T21:56:20Z","markets":[{"key":"h2h","outcomes":[{"name":"Baylor Bears","price":-220},{"name":"West Virginia Mountaineers","price":180}]}]},{"key":"fanduel","title":"FanDuel","last_update":"2022-01-18T21:56:21Z","markets":[{"key":"h2h","outcomes":[{"name":"Baylor Bears","price":-230},{"name":"West Virginia Mountaineers","price":188}]}]},{"key":"pointsbetus","title":"PointsBet (US)","last_update":"2022-01-18T21:56:21Z","markets":[{"key":"h2h","outcomes":[{"name":"Baylor Bears","price":-221},{"name":"West Virginia Mountaineers","price":175}]}]},{"key":"bovada","title":"Bovada","last_update":"2022-01-18T21:56:22Z","markets":[{"key":"h2h","outcomes":[{"name":"Baylor Bears","price":-220},{"name":"West Virginia Mountaineers","price":180}]}]},{"key":"betus","title":"BetUS","last_update":"2022-01-18T21:56:22Z","markets":[{"key":"h2h","outcomes":[{"name":"Baylor Bears","price":-225},{"name":"West Virginia Mountaineers","price":185}]}]},{"key":"betmgm","title":"BetMGM","last_update":"2022-01-18T21:56:23Z","markets":[{"key":"h2h","outcomes":[{"name":"Baylor Bears","price":-200},{"name":"West Virginia Mountaineers","price":165}]}]},{"key":"sugarhouse","title":"SugarHouse","last_update":"2022-01-18T21:56:23Z","markets":[{"key":"h2h","outcomes":[{"name":"Baylor Bears","price":-220},{"name":"West Virginia Mountaineers","price":180}]}]},{"key":"twinspires","title":"TwinSpires","last_update":"2022-01-18T21:56:23Z","markets":[{"key":"h2h","outcomes":[{"name":"Baylor Bears","price":-225},{"name":"West Virginia Mountaineers","price":180}]}]},{"key":"wynnbet","title":"WynnBET","last_update":"2022-01-18T21:56:24Z","markets":[{"key":"h2h","outcomes":[{"name":"Baylor Bears","price":-222},{"name":"West Virginia Mountaineers","price":175}]}]},{"key":"barstool","title":"Barstool Sportsbook","last_update":"2022-01-18T21:56:23Z","markets":[{"key":"h2h","outcomes":[{"name":"Baylor Bears","price":-220},{"name":"West Virginia Mountaineers","price":180}]}]},{"key":"draftkings","title":"DraftKings","last_update":"2022-01-18T21:56:27Z","markets":[{"key":"h2h","outcomes":[{"name":"Baylor Bears","price":-225},{"name":"West Virginia Mountaineers","price":185}]}]},{"key":"gtbets","title":"GTbets","last_update":"2022-01-18T21:56:22Z","markets":[{"key":"h2h","outcomes":[{"name":"Baylor Bears","price":-225},{"name":"West Virginia Mountaineers","price":190}]}]},{"key":"betrivers","title":"BetRivers","last_update":"2022-01-18T21:56:26Z","markets":[{"key":"h2h","outcomes":[{"name":"Baylor Bears","price":-220},{"name":"West Virginia Mountaineers","price":180}]}]},{"key":"mybookieag","title":"MyBookie.ag","last_update":"2022-01-18T21:54:39Z","markets":[{"key":"h2h","outcomes":[{"name":"Baylor Bears","price":-300},{"name":"West Virginia Mountaineers","price":245}]}]}]},{"id":"fc9a4acc9179328aab0654723059614c","sport_key":"basketball_ncaab","sport_title":"NCAAB","commence_time":"2022-01-18T23:00:00Z","home_team":"Akron Zips","away_team":"Western Michigan Broncos","bookmakers":[{"key":"williamhill_us","title":"William Hill (US)","last_update":"2022-01-18T21:56:20Z","markets":[{"key":"h2h","outcomes":[{"name":"Akron Zips","price":-1600},{"name":"Western Michigan Broncos","price":850}]}]},{"key":"bovada","title":"Bovada","last_update":"2022-01-18T21:56:22Z","markets":[{"key":"h2h","outcomes":[{"name":"Akron Zips","price":-1500},{"name":"Western Michigan Broncos","price":775}]}]},{"key":"foxbet","title":"FOX Bet","last_update":"2022-01-18T21:56:21Z","markets":[{"key":"h2h","outcomes":[{"name":"Akron Zips","price":-1429},{"name":"Western Michigan Broncos","price":700}]}]},{"key":"pointsbetus","title":"PointsBet (US)","last_update":"2022-01-18T21:56:21Z","markets":[{"key":"h2h","outcomes":[{"name":"Akron Zips","price":-1350},{"name":"Western Michigan Broncos","price":825}]}]},{"key":"wynnbet","title":"WynnBET","last_update":"2022-01-18T21:56:24Z","markets":[{"key":"h2h","outcomes":[{"name":"Akron Zips","price":-1429},{"name":"Western Michigan Broncos","price":825}]}]},{"key":"betmgm","title":"BetMGM","last_update":"2022-01-18T21:56:23Z","markets":[{"key":"h2h","outcomes":[{"name":"Akron Zips","price":-1200},{"name":"Western Michigan Broncos","price":725}]}]},{"key":"draftkings","title":"DraftKings","last_update":"2022-01-18T21:56:27Z","markets":[{"key":"h2h","outcomes":[{"name":"Akron Zips","price":-1500},{"name":"Western Michigan Broncos","price":850}]}]},{"key":"fanduel","title":"FanDuel","last_update":"2022-01-18T21:56:21Z","markets":[{"key":"h2h","outcomes":[{"name":"Akron Zips","price":-1700},{"name":"Western Michigan Broncos","price":890}]}]},{"key":"betus","title":"BetUS","last_update":"2022-01-18T21:56:22Z","markets":[{"key":"h2h","outcomes":[{"name":"Akron Zips","price":-1410},{"name":"Western Michigan Broncos","price":810}]}]},{"key":"unibet","title":"Unibet","last_update":"2022-01-18T21:56:16Z","markets":[{"key":"h2h","outcomes":[{"name":"Akron Zips","price":-3333},{"name":"Western Michigan Broncos","price":850}]}]},{"key":"sugarhouse","title":"SugarHouse","last_update":"2022-01-18T21:56:23Z","markets":[{"key":"h2h","outcomes":[{"name":"Akron Zips","price":-1430},{"name":"Western Michigan Broncos","price":850}]}]},{"key":"twinspires","title":"TwinSpires","last_update":"2022-01-18T21:56:23Z","markets":[{"key":"h2h","outcomes":[{"name":"Akron Zips","price":-2000},{"name":"Western Michigan Broncos","price":850}]}]},{"key":"barstool","title":"Barstool Sportsbook","last_update":"2022-01-18T21:56:23Z","markets":[{"key":"h2h","outcomes":[{"name":"Akron Zips","price":-1430},{"name":"Western Michigan Broncos","price":850}]}]},{"key":"gtbets","title":"GTbets","last_update":"2022-01-18T21:56:22Z","markets":[{"key":"h2h","outcomes":[{"name":"Akron Zips","price":-1410},{"name":"Western Michigan Broncos","price":860}]}]},{"key":"betrivers","title":"BetRivers","last_update":"2022-01-18T21:56:26Z","markets":[{"key":"h2h","outcomes":[{"name":"Akron Zips","price":-1430},{"name":"Western Michigan Broncos","price":850}]}]},{"key":"mybookieag","title":"MyBookie.ag","last_update":"2022-01-18T21:54:39Z","markets":[{"key":"h2h","outcomes":[{"name":"Akron Zips","price":-1450},{"name":"Western Michigan Broncos","price":850}]}]}]},{"id":"b884eaabd202f9f54f7190eaeed48b69","sport_key":"basketball_ncaab","sport_title":"NCAAB","commence_time":"2022-01-19T00:00:00Z","home_team":"Arkansas Razorbacks","away_team":"South Carolina Gamecocks","bookmakers":[{"key":"unibet","title":"Unibet","last_update":"2022-01-18T21:56:16Z","markets":[{"key":"h2h","outcomes":[{"name":"Arkansas Razorbacks","price":-1000},{"name":"South Carolina Gamecocks","price":475}]}]},{"key":"williamhill_us","title":"William Hill (US)","last_update":"2022-01-18T21:56:20Z","markets":[{"key":"h2h","outcomes":[{"name":"Arkansas Razorbacks","price":-800},{"name":"South Carolina Gamecocks","price":550}]}]},{"key":"foxbet","title":"FOX Bet","last_update":"2022-01-18T21:56:21Z","markets":[{"key":"h2h","outcomes":[{"name":"Arkansas Razorbacks","price":-833},{"name":"South Carolina Gamecocks","price":500}]}]},{"key":"fanduel","title":"FanDuel","last_update":"2022-01-18T21:56:21Z","markets":[{"key":"h2h","outcomes":[{"name":"Arkansas Razorbacks","price":-880},{"name":"South Carolina Gamecocks","price":580}]}]},{"key":"sugarhouse","title":"SugarHouse","last_update":"2022-01-18T21:56:23Z","markets":[{"key":"h2h","outcomes":[{"name":"Arkansas Razorbacks","price":-715},{"name":"South Carolina Gamecocks","price":475}]}]},{"key":"betus","title":"BetUS","last_update":"2022-01-18T21:56:22Z","markets":[{"key":"h2h","outcomes":[{"name":"Arkansas Razorbacks","price":-755},{"name":"South Carolina Gamecocks","price":555}]}]},{"key":"pointsbetus","title":"PointsBet (US)","last_update":"2022-01-18T21:56:21Z","markets":[{"key":"h2h","outcomes":[{"name":"Arkansas Razorbacks","price":-751},{"name":"South Carolina Gamecocks","price":530}]}]},{"key":"bovada","title":"Bovada","last_update":"2022-01-18T21:56:22Z","markets":[{"key":"h2h","outcomes":[{"name":"Arkansas Razorbacks","price":-800},{"name":"South Carolina Gamecocks","price":525}]}]},{"key":"wynnbet","title":"WynnBET","last_update":"2022-01-18T21:56:24Z","markets":[{"key":"h2h","outcomes":[{"name":"Arkansas Razorbacks","price":-769},{"name":"South Carolina Gamecocks","price":530}]}]},{"key":"twinspires","title":"TwinSpires","last_update":"2022-01-18T21:56:23Z","markets":[{"key":"h2h","outcomes":[{"name":"Arkansas Razorbacks","price":-715},{"name":"South Carolina Gamecocks","price":475}]}]},{"key":"barstool","title":"Barstool Sportsbook","last_update":"2022-01-18T21:56:23Z","markets":[{"key":"h2h","outcomes":[{"name":"Arkansas Razorbacks","price":-715},{"name":"South Carolina Gamecocks","price":475}]}]},{"key":"betmgm","title":"BetMGM","last_update":"2022-01-18T21:56:23Z","markets":[{"key":"h2h","outcomes":[{"name":"Arkansas Razorbacks","price":-700},{"name":"South Carolina Gamecocks","price":500}]}]},{"key":"draftkings","title":"DraftKings","last_update":"2022-01-18T21:56:27Z","markets":[{"key":"h2h","outcomes":[{"name":"Arkansas Razorbacks","price":-760},{"name":"South Carolina Gamecocks","price":525}]}]},{"key":"gtbets","title":"GTbets","last_update":"2022-01-18T21:56:22Z","markets":[{"key":"h2h","outcomes":[{"name":"Arkansas Razorbacks","price":-775},{"name":"South Carolina Gamecocks","price":555}]}]},{"key":"betrivers","title":"BetRivers","last_update":"2022-01-18T21:56:26Z","markets":[{"key":"h2h","outcomes":[{"name":"Arkansas Razorbacks","price":-715},{"name":"South Carolina Gamecocks","price":475}]}]},{"key":"mybookieag","title":"MyBookie.ag","last_update":"2022-01-18T21:54:39Z","markets":[{"key":"h2h","outcomes":[{"name":"Arkansas Razorbacks","price":-900},{"name":"South Carolina Gamecocks","price":550}]}]}]},{"id":"08dc4e0c3b64cd14f4ebbf817471b62c","sport_key":"basketball_ncaab","sport_title":"NCAAB","commence_time":"2022-01-19T00:00:00Z","home_team":"Toledo Rockets","away_team":"Ball State Cardinals","bookmakers":[{"key":"williamhill_us","title":"William Hill (US)","last_update":"2022-01-18T21:56:20Z","markets":[{"key":"h2h","outcomes":[{"name":"Ball State Cardinals","price":650},{"name":"Toledo Rockets","price":-1000}]}]},{"key":"bovada","title":"Bovada","last_update":"2022-01-18T21:56:22Z","markets":[{"key":"h2h","outcomes":[{"name":"Ball State Cardinals","price":600},{"name":"Toledo Rockets","price":-950}]}]},{"key":"pointsbetus","title":"PointsBet (US)","last_update":"2022-01-18T21:56:21Z","markets":[{"key":"h2h","outcomes":[{"name":"Ball State Cardinals","price":610},{"name":"Toledo Rockets","price":-901}]}]},{"key":"wynnbet","title":"WynnBET","last_update":"2022-01-18T21:56:24Z","markets":[{"key":"h2h","outcomes":[{"name":"Ball State Cardinals","price":610},{"name":"Toledo Rockets","price":-909}]}]},{"key":"betmgm","title":"BetMGM","last_update":"2022-01-18T21:56:23Z","markets":[{"key":"h2h","outcomes":[{"name":"Ball State Cardinals","price":600},{"name":"Toledo Rockets","price":-900}]}]},{"key":"draftkings","title":"DraftKings","last_update":"2022-01-18T21:56:27Z","markets":[{"key":"h2h","outcomes":[{"name":"Ball State Cardinals","price":600},{"name":"Toledo Rockets","price":-900}]}]},{"key":"fanduel","title":"FanDuel","last_update":"2022-01-18T21:56:21Z","markets":[{"key":"h2h","outcomes":[{"name":"Ball State Cardinals","price":640},{"name":"Toledo Rockets","price":-1000}]}]},{"key":"unibet","title":"Unibet","last_update":"2022-01-18T21:56:16Z","markets":[{"key":"h2h","outcomes":[{"name":"Ball State Cardinals","price":550},{"name":"Toledo Rockets","price":-1111}]}]},{"key":"barstool","title":"Barstool Sportsbook","last_update":"2022-01-18T21:56:23Z","markets":[{"key":"h2h","outcomes":[{"name":"Ball State Cardinals","price":600},{"name":"Toledo Rockets","price":-1000}]}]},{"key":"sugarhouse","title":"SugarHouse","last_update":"2022-01-18T21:56:23Z","markets":[{"key":"h2h","outcomes":[{"name":"Ball State Cardinals","price":600},{"name":"Toledo Rockets","price":-1000}]}]},{"key":"twinspires","title":"TwinSpires","last_update":"2022-01-18T21:56:23Z","markets":[{"key":"h2h","outcomes":[{"name":"Ball State Cardinals","price":600},{"name":"Toledo Rockets","price":-1000}]}]},{"key":"gtbets","title":"GTbets","last_update":"2022-01-18T21:56:22Z","markets":[{"key":"h2h","outcomes":[{"name":"Ball State Cardinals","price":670},{"name":"Toledo Rockets","price":-890}]}]},{"key":"betrivers","title":"BetRivers","last_update":"2022-01-18T21:56:26Z","markets":[{"key":"h2h","outcomes":[{"name":"Ball State Cardinals","price":600},{"name":"Toledo Rockets","price":-1000}]}]},{"key":"mybookieag","title":"MyBookie.ag","last_update":"2022-01-18T21:54:39Z","markets":[{"key":"h2h","outcomes":[{"name":"Ball State Cardinals","price":650},{"name":"Toledo Rockets","price":-1100}]}]}]},{"id":"80f7528a1c47db23fc62dded2c0c5303","sport_key":"icehockey_nhl","sport_title":"NHL","commence_time":"2022-01-19T00:00:00Z","home_team":"Ottawa Senators","away_team":"Buffalo Sabres","bookmakers":[{"key":"foxbet","title":"FOX Bet","last_update":"2022-01-18T21:56:56Z","markets":[{"key":"h2h","outcomes":[{"name":"Buffalo Sabres","price":170},{"name":"Ottawa Senators","price":-227}]}]},{"key":"fanduel","title":"FanDuel","last_update":"2022-01-18T21:56:55Z","markets":[{"key":"h2h","outcomes":[{"name":"Buffalo Sabres","price":184},{"name":"Ottawa Senators","price":-220}]}]},{"key":"betfair","title":"Betfair","last_update":"2022-01-18T21:56:51Z","markets":[{"key":"h2h","outcomes":[{"name":"Buffalo Sabres","price":200},{"name":"Ottawa Senators","price":-213}]},{"key":"h2h_lay","outcomes":[{"name":"Buffalo Sabres","price":210},{"name":"Ottawa Senators","price":-204}]}]},{"key":"betrivers","title":"BetRivers","last_update":"2022-01-18T21:56:57Z","markets":[{"key":"h2h","outcomes":[{"name":"Buffalo Sabres","price":188},{"name":"Ottawa Senators","price":-225}]}]},{"key":"barstool","title":"Barstool Sportsbook","last_update":"2022-01-18T21:56:57Z","markets":[{"key":"h2h","outcomes":[{"name":"Buffalo Sabres","price":185},{"name":"Ottawa Senators","price":-230}]}]},{"key":"sugarhouse","title":"SugarHouse","last_update":"2022-01-18T21:56:58Z","markets":[{"key":"h2h","outcomes":[{"name":"Buffalo Sabres","price":188},{"name":"Ottawa Senators","price":-225}]}]},{"key":"unibet","title":"Unibet","last_update":"2022-01-18T21:56:52Z","markets":[{"key":"h2h","outcomes":[{"name":"Buffalo Sabres","price":185},{"name":"Ottawa Senators","price":-227}]}]},{"key":"twinspires","title":"TwinSpires","last_update":"2022-01-18T21:56:58Z","markets":[{"key":"h2h","outcomes":[{"name":"Buffalo Sabres","price":185},{"name":"Ottawa Senators","price":-230}]}]},{"key":"draftkings","title":"DraftKings","last_update":"2022-01-18T21:56:56Z","markets":[{"key":"h2h","outcomes":[{"name":"Buffalo Sabres","price":185},{"name":"Ottawa Senators","price":-220}]}]},{"key":"betmgm","title":"BetMGM","last_update":"2022-01-18T21:55:07Z","markets":[{"key":"h2h","outcomes":[{"name":"Buffalo Sabres","price":180},{"name":"Ottawa Senators","price":-225}]}]},{"key":"bovada","title":"Bovada","last_update":"2022-01-18T21:56:56Z","markets":[{"key":"h2h","outcomes":[{"name":"Buffalo Sabres","price":190},{"name":"Ottawa Senators","price":-230}]}]},{"key":"wynnbet","title":"WynnBET","last_update":"2022-01-18T21:56:58Z","markets":[{"key":"h2h","outcomes":[{"name":"Buffalo Sabres","price":185},{"name":"Ottawa Senators","price":-222}]}]},{"key":"lowvig","title":"LowVig.ag","last_update":"2022-01-18T21:56:56Z","markets":[{"key":"h2h","outcomes":[{"name":"Buffalo Sabres","price":192},{"name":"Ottawa Senators","price":-214}]}]},{"key":"betonlineag","title":"BetOnline.ag","last_update":"2022-01-18T21:56:54Z","markets":[{"key":"h2h","outcomes":[{"name":"Buffalo Sabres","price":192},{"name":"Ottawa Senators","price":-217}]}]},{"key":"williamhill_us","title":"William Hill (US)","last_update":"2022-01-18T21:56:55Z","markets":[{"key":"h2h","outcomes":[{"name":"Buffalo Sabres","price":190},{"name":"Ottawa Senators","price":-230}]}]},{"key":"gtbets","title":"GTbets","last_update":"2022-01-18T21:56:56Z","markets":[{"key":"h2h","outcomes":[{"name":"Buffalo Sabres","price":195},{"name":"Ottawa Senators","price":-225}]}]},{"key":"pointsbetus","title":"PointsBet (US)","last_update":"2022-01-18T21:56:56Z","markets":[{"key":"h2h","outcomes":[{"name":"Buffalo Sabres","price":180},{"name":"Ottawa Senators","price":-226}]}]},{"key":"betus","title":"BetUS","last_update":"2022-01-18T21:56:57Z","markets":[{"key":"h2h","outcomes":[{"name":"Buffalo Sabres","price":185},{"name":"Ottawa Senators","price":-225}]}]},{"key":"intertops","title":"Intertops","last_update":"2022-01-18T21:55:06Z","markets":[{"key":"h2h","outcomes":[{"name":"Buffalo Sabres","price":185},{"name":"Ottawa Senators","price":-225}]}]},{"key":"mybookieag","title":"MyBookie.ag","last_update":"2022-01-18T21:56:56Z","markets":[{"key":"h2h","outcomes":[{"name":"Buffalo Sabres","price":175},{"name":"Ottawa Senators","price":-235}]}]}]},{"id":"e0a9fd9e84c188a8c36739023c3f55db","sport_key":"basketball_ncaab","sport_title":"NCAAB","commence_time":"2022-01-19T00:00:00Z","home_team":"UConn Huskies","away_team":"Butler Bulldogs","bookmakers":[{"key":"unibet","title":"Unibet","last_update":"2022-01-18T21:56:16Z","markets":[{"key":"h2h","outcomes":[{"name":"Butler Bulldogs","price":650},{"name":"UConn Huskies","price":-1667}]}]},{"key":"williamhill_us","title":"William Hill (US)","last_update":"2022-01-18T21:56:20Z","markets":[{"key":"h2h","outcomes":[{"name":"Butler Bulldogs","price":700},{"name":"UConn Huskies","price":-1100}]}]},{"key":"fanduel","title":"FanDuel","last_update":"2022-01-18T21:56:21Z","markets":[{"key":"h2h","outcomes":[{"name":"Butler Bulldogs","price":760},{"name":"UConn Huskies","price":-1300}]}]},{"key":"sugarhouse","title":"SugarHouse","last_update":"2022-01-18T21:56:23Z","markets":[{"key":"h2h","outcomes":[{"name":"Butler Bulldogs","price":650},{"name":"UConn Huskies","price":-1250}]}]},{"key":"betus","title":"BetUS","last_update":"2022-01-18T21:56:22Z","markets":[{"key":"h2h","outcomes":[{"name":"Butler Bulldogs","price":690},{"name":"UConn Huskies","price":-940}]}]},{"key":"pointsbetus","title":"PointsBet (US)","last_update":"2022-01-18T21:56:21Z","markets":[{"key":"h2h","outcomes":[{"name":"Butler Bulldogs","price":650},{"name":"UConn Huskies","price":-975}]}]},{"key":"wynnbet","title":"WynnBET","last_update":"2022-01-18T21:56:24Z","markets":[{"key":"h2h","outcomes":[{"name":"Butler Bulldogs","price":650},{"name":"UConn Huskies","price":-1000}]}]},{"key":"twinspires","title":"TwinSpires","last_update":"2022-01-18T21:56:23Z","markets":[{"key":"h2h","outcomes":[{"name":"Butler Bulldogs","price":650},{"name":"UConn Huskies","price":-1250}]}]},{"key":"barstool","title":"Barstool Sportsbook","last_update":"2022-01-18T21:56:23Z","markets":[{"key":"h2h","outcomes":[{"name":"Butler Bulldogs","price":650},{"name":"UConn Huskies","price":-1250}]}]},{"key":"betmgm","title":"BetMGM","last_update":"2022-01-18T21:56:23Z","markets":[{"key":"h2h","outcomes":[{"name":"Butler Bulldogs","price":625},{"name":"UConn Huskies","price":-1000}]}]},{"key":"draftkings","title":"DraftKings","last_update":"2022-01-18T21:56:27Z","markets":[{"key":"h2h","outcomes":[{"name":"Butler Bulldogs","price":650},{"name":"UConn Huskies","price":-1000}]}]},{"key":"gtbets","title":"GTbets","last_update":"2022-01-18T21:56:22Z","markets":[{"key":"h2h","outcomes":[{"name":"Butler Bulldogs","price":675},{"name":"UConn Huskies","price":-950}]}]},{"key":"betrivers","title":"BetRivers","last_update":"2022-01-18T21:56:26Z","markets":[{"key":"h2h","outcomes":[{"name":"Butler Bulldogs","price":650},{"name":"UConn Huskies","price":-1250}]}]},{"key":"mybookieag","title":"MyBookie.ag","last_update":"2022-01-18T21:54:39Z","markets":[{"key":"h2h","outcomes":[{"name":"Butler Bulldogs","price":650},{"name":"UConn Huskies","price":-1100}]}]}]},{"id":"3f0e1621dcf3c66cdb45979bfa4d3d80","sport_key":"tennis_wta_aus_open_singles","sport_title":"WTA Australian Open","commence_time":"2022-01-19T00:00:00Z","home_team":"Tereza Martincová","away_team":"Camila Giorgi","bookmakers":[{"key":"fanduel","title":"FanDuel","last_update":"2022-01-18T21:57:31Z","markets":[{"key":"h2h","outcomes":[{"name":"Camila Giorgi","price":-205},{"name":"Tereza Martincová","price":172}]}]},{"key":"draftkings","title":"DraftKings","last_update":"2022-01-18T21:57:29Z","markets":[{"key":"h2h","outcomes":[{"name":"Camila Giorgi","price":-200},{"name":"Tereza Martincová","price":165}]}]},{"key":"betmgm","title":"BetMGM","last_update":"2022-01-18T21:57:32Z","markets":[{"key":"h2h","outcomes":[{"name":"Camila Giorgi","price":-200},{"name":"Tereza Martincová","price":155}]}]},{"key":"unibet","title":"Unibet","last_update":"2022-01-18T21:55:29Z","markets":[{"key":"h2h","outcomes":[{"name":"Camila Giorgi","price":-200},{"name":"Tereza Martincová","price":160}]}]},{"key":"betrivers","title":"BetRivers","last_update":"2022-01-18T21:55:38Z","markets":[{"key":"h2h","outcomes":[{"name":"Camila Giorgi","price":-200},{"name":"Tereza Martincová","price":160}]}]},{"key":"twinspires","title":"TwinSpires","last_update":"2022-01-18T21:54:14Z","markets":[{"key":"h2h","outcomes":[{"name":"Camila Giorgi","price":-200},{"name":"Tereza Martincová","price":160}]}]},{"key":"barstool","title":"Barstool Sportsbook","last_update":"2022-01-18T21:57:31Z","markets":[{"key":"h2h","outcomes":[{"name":"Camila Giorgi","price":-200},{"name":"Tereza Martincová","price":160}]}]},{"key":"sugarhouse","title":"SugarHouse","last_update":"2022-01-18T21:57:32Z","markets":[{"key":"h2h","outcomes":[{"name":"Camila Giorgi","price":-200},{"name":"Tereza Martincová","price":160}]}]},{"key":"intertops","title":"Intertops","last_update":"2022-01-18T21:55:32Z","markets":[{"key":"h2h","outcomes":[{"name":"Camila Giorgi","price":-200},{"name":"Tereza Martincová","price":155}]}]},{"key":"gtbets","title":"GTbets","last_update":"2022-01-18T21:55:35Z","markets":[{"key":"h2h","outcomes":[{"name":"Camila Giorgi","price":-206},{"name":"Tereza Martincová","price":159}]}]},{"key":"wynnbet","title":"WynnBET","last_update":"2022-01-18T21:57:33Z","markets":[{"key":"h2h","outcomes":[{"name":"Camila Giorgi","price":-200},{"name":"Tereza Martincová","price":160}]}]},{"key":"betfair","title":"Betfair","last_update":"2022-01-18T21:55:30Z","markets":[{"key":"h2h","outcomes":[{"name":"Camila Giorgi","price":-189},{"name":"Tereza Martincová","price":180}]},{"key":"h2h_lay","outcomes":[{"name":"Camila Giorgi","price":-182},{"name":"Tereza Martincová","price":188}]}]},{"key":"foxbet","title":"FOX Bet","last_update":"2022-01-18T21:57:29Z","markets":[{"key":"h2h","outcomes":[{"name":"Camila Giorgi","price":-200},{"name":"Tereza Martincová","price":150}]}]},{"key":"mybookieag","title":"MyBookie.ag","last_update":"2022-01-18T21:55:35Z","markets":[{"key":"h2h","outcomes":[{"name":"Camila Giorgi","price":-212},{"name":"Tereza Martincová","price":163}]}]}]},{"id":"c8f78f3fa977812e8541dbd738d95aa2","sport_key":"basketball_ncaab","sport_title":"NCAAB","commence_time":"2022-01-19T00:00:00Z","home_team":"VCU Rams","away_team":"Davidson Wildcats","bookmakers":[{"key":"unibet","title":"Unibet","last_update":"2022-01-18T21:56:16Z","markets":[{"key":"h2h","outcomes":[{"name":"Davidson Wildcats","price":112},{"name":"VCU Rams","price":-149}]}]},{"key":"williamhill_us","title":"William Hill (US)","last_update":"2022-01-18T21:56:20Z","markets":[{"key":"h2h","outcomes":[{"name":"Davidson Wildcats","price":120},{"name":"VCU Rams","price":-140}]}]},{"key":"fanduel","title":"FanDuel","last_update":"2022-01-18T21:56:21Z","markets":[{"key":"h2h","outcomes":[{"name":"Davidson Wildcats","price":120},{"name":"VCU Rams","price":-144}]}]},{"key":"foxbet","title":"FOX Bet","last_update":"2022-01-18T21:56:21Z","markets":[{"key":"h2h","outcomes":[{"name":"Davidson 
+Wildcats","price":115},{"name":"VCU Rams","price":-149}]}]},{"key":"sugarhouse","title":"SugarHouse","last_update":"2022-01-18T21:56:23Z","markets":[{"key":"h2h","outcomes":[{"name":"Davidson Wildcats","price":118},{"name":"VCU Rams","price":-141}]}]},{"key":"twinspires","title":"TwinSpires","last_update":"2022-01-18T21:56:23Z","markets":[{"key":"h2h","outcomes":[{"name":"Davidson Wildcats","price":117},{"name":"VCU Rams","price":-141}]}]},{"key":"barstool","title":"Barstool Sportsbook","last_update":"2022-01-18T21:56:23Z","markets":[{"key":"h2h","outcomes":[{"name":"Davidson Wildcats","price":118},{"name":"VCU Rams","price":-141}]}]},{"key":"draftkings","title":"DraftKings","last_update":"2022-01-18T21:56:27Z","markets":[{"key":"h2h","outcomes":[{"name":"Davidson Wildcats","price":120},{"name":"VCU Rams","price":-140}]}]},{"key":"betrivers","title":"BetRivers","last_update":"2022-01-18T21:56:26Z","markets":[{"key":"h2h","outcomes":[{"name":"Davidson Wildcats","price":118},{"name":"VCU Rams","price":-141}]}]}]}]
