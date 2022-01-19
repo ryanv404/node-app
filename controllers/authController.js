@@ -9,7 +9,7 @@ const {
   sendVerificationEmail,
   sendResetPasswordEmail,
   createHash,
-} = require('../utils');
+} = require('../utils/index');
 
 const register = async (req, res) => {
   const {email, name, password} = req.body;
@@ -44,9 +44,7 @@ const register = async (req, res) => {
     origin,
   });
 
-  res.status(StatusCodes.CREATED).json({
-    msg: 'Success! Please check your email to verify your account.',
-  });
+  res.status(StatusCodes.CREATED).json({msg: 'Success! Please check your email to verify your account.'});
 };
 
 const verifyEmail = async (req, res) => {
@@ -54,11 +52,11 @@ const verifyEmail = async (req, res) => {
   const user = await User.findOne({email});
 
   if (!user) {
-    throw new CustomError.UnauthenticatedError('Verification Failed');
+    throw new CustomError.UnauthenticatedError('Verification failed');
   }
 
   if (user.verificationToken !== verificationToken) {
-    throw new CustomError.UnauthenticatedError('Verification Failed');
+    throw new CustomError.UnauthenticatedError('Verification failed');
   }
 
   // Verify user in the DB
@@ -67,7 +65,7 @@ const verifyEmail = async (req, res) => {
   user.verificationToken = '';
   await user.save();
 
-  res.status(StatusCodes.OK).json({msg: 'Email Verified'});
+  res.status(StatusCodes.OK).json({msg: 'Email verified'});
 };
 
 const login = async (req, res) => {
@@ -79,13 +77,13 @@ const login = async (req, res) => {
 
   const user = await User.findOne({email});
   if (!user) {
-    throw new CustomError.UnauthenticatedError('Invalid Credentials');
+    throw new CustomError.UnauthenticatedError('Invalid credentials');
   }
 
   // Check if provided password matches user's saved password
   const isPasswordCorrect = await user.comparePassword(password);
   if (!isPasswordCorrect) {
-    throw new CustomError.UnauthenticatedError('Invalid Credentials');
+    throw new CustomError.UnauthenticatedError('Invalid credentials');
   }
 
   // Ensure user has a verified account
@@ -104,7 +102,7 @@ const login = async (req, res) => {
   if (existingToken) {
     const {isValid} = existingToken;
     if (!isValid) {
-      throw new CustomError.UnauthenticatedError('Invalid Credentials');
+      throw new CustomError.UnauthenticatedError('Invalid credentials');
     }
     refreshToken = existingToken.refreshToken;
     attachCookiesToResponse({res, user: tokenUser, refreshToken});

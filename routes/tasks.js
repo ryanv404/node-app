@@ -1,8 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const {ensureAuthenticated} = require("../config/auth");
-
-// Load User and Task models
+const {ensureAuthenticated} = require("../controllers/authController");
 const Task = require("../models/Task");
 
 // Get the user's tasks

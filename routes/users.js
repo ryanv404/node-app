@@ -1,9 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcrypt");
-const {ensureAuthenticated} = require("../config/auth");
-
-// Load User model
+const {ensureAuthenticated} = require("../controllers/authController");
 const User = require("../models/User");
 
 // Register user

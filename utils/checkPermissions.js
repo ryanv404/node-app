@@ -1,4 +1,4 @@
-const CustomError = require('../errors');
+const CustomError = require("../errors/index");
 
 const checkPermissions = (requestUser, resourceUserId) => {
   if (requestUser.role === 'admin') return;

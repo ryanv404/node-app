@@ -12,7 +12,7 @@ const sendVerificationEmail = async ({name, email, verificationToken, origin}) =
     to: email,
     subject: "Email Confirmation",
     html: `
-      <h4> Hello, ${name}!</h4>
+      <h4>Hello, ${name}!</h4>
       <br>
       ${message}`
   });

@@ -2,11 +2,7 @@ require("dotenv").config();
 const express = require('express');
 const router = express.Router();
 const passport = require("passport");
-const {
-  rememberMeMiddleware, 
-  ensureAuthenticated,
-  forwardAuthenticated,
-} = require("../config/auth");
+const {rememberMeMiddleware, ensureAuthenticated, forwardAuthenticated} = require("../controllers/authController");
 
 // Welcome page
 router.get('/', forwardAuthenticated, (req, res) => {

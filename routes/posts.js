@@ -1,8 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const {ensureAuthenticated} = require("../config/auth");
-
-// Load User and Post models
+const {ensureAuthenticated} = require("../controllers/authController");
 const Post = require("../models/Post");
 
 // Get all of a user's posts

@@ -14,10 +14,6 @@ const app = express();
 const passport = require("passport");
 require('./config/passport')(passport);
 
-(async () => {
-  
-})();
-
 // EJS configuration
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
@@ -86,7 +82,7 @@ const start_server = async () => {
     await connectDB(process.env.MONGO_URI);
     console.log("Connected to the database.");
     // Start server
-    app.listen(PORT, () => console.log(`Server listening on port: ${PORT}`));
+    app.listen(PORT, () => console.log(`Server listening on port: ${PORT}.`));
   }
   catch (error) {
     console.log(error);
