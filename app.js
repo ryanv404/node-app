@@ -6,6 +6,7 @@ const connectDB = require("./db/connect");
 const MongoStore = require("connect-mongo");
 const session = require("express-session");
 
+// Express
 const express = require("express");
 const app = express();
 
@@ -74,8 +75,8 @@ app.use('/posts', require('./routes/posts.js'));
 app.use("/reviews", require("./routes/reviews.js"));
 
 // Error handlers
-app.use(require("./middleware/error-handler"));
 app.use(require("./middleware/not-found"));
+app.use(require("./middleware/error-handler"));
 
 // Start server
 const PORT = process.env.PORT || 3000;

@@ -3,7 +3,8 @@ const express = require('express');
 const router = express.Router();
 const passport = require("passport");
 const {
-  rememberMeMiddleware, ensureAuthenticated,
+  rememberMeMiddleware, 
+  ensureAuthenticated,
   forwardAuthenticated,
 } = require("../config/auth");
 
