@@ -5,22 +5,22 @@ const bcrypt = require("bcrypt");
 const UserSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: [true, "Please provide name."],
+    required: [true, "Please provide a name."],
     minlength: 3,
     maxlength: 50,
   },
   email: {
     type: String,
     unique: true,
-    required: [true, "Please provide email."],
+    required: [true, "Please provide an email."],
     validate: {
       validator: validator.isEmail,
-      message: "Please provide valid email.",
+      message: "Please provide a valid email.",
     },
   },
   password: {
     type: String,
-    required: [true, "Please provide password."],
+    required: [true, "Please provide a password."],
     minlength: 6,
   },
   role: {
@@ -43,8 +43,6 @@ const UserSchema = new mongoose.Schema({
 }, {timestamps: true});
 
 UserSchema.pre("save", async function () {
-  // console.log(this.modifiedPaths());
-  // console.log(this.isModified('name'));
   if (!this.isModified("password")) return;
   const salt = await bcrypt.genSalt(10);
   this.password = await bcrypt.hash(this.password, salt);

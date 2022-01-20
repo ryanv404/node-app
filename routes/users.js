@@ -5,11 +5,11 @@ const {ensureAuthenticated} = require("../controllers/authController");
 const User = require("../models/User");
 
 // Register user
-router.post("/register", (req, res) => {
-  const {fname, lname, email, username, password, confirm_pw} = req.body;
+router.post("/register", async (req, res) => {
+  const {name, email, password, confirm_pw} = req.body;
   let errors = [];
 
-  if (!fname || !lname || !email || !username || !password || !confirm_pw) {
+  if (!name || !email || !password || !confirm_pw) {
     errors.push({msg: "Please enter all fields."});
   }
 
@@ -18,45 +18,24 @@ router.post("/register", (req, res) => {
   }
 
   if (password.length < 6) {
-    errors.push({msg: "Password must be at least 6 characters."});
+    errors.push({msg: "Passwords must be at least 6 characters."});
   }
 
   if (errors.length > 0) {
-    res.render("home", {title: "Home", errors});
-  } else {
-    User.findOne({username: username})
-      .then((user) => {
-        if (user) {
-          errors.push({msg: "Username already exists."});
-          res.render("home", {
-            title: "Home",
-            errors
-          });
-        } else {
-          const newUser = new User({
-            firstName: fname,
-            lastName: lname,
-            email: email,
-            username: username,
-            password: password
-          });
-
-          bcrypt.genSalt(10, (err, salt) => {
-            bcrypt.hash(newUser.password, salt, (err, hash) => {
-              if (err) throw err;
-              newUser.password = hash;
-              newUser
-                .save()
-                .then((user) => {
-                  req.flash("success_msg", "You are now registered and can log in.");
-                  res.redirect("/");
-                })
-                .catch((err) => console.log(err));
-            });
-          });
-        }
-      })
-      .catch((err) => console.log(err));
+    return res.render("home", {title: "Home", errors});
+  }
+  
+  const alreadyExists = await User.findOne({email})
+  if (alreadyExists) {
+    errors.push({msg: "Username already exists."});
+    return res.render("home", {title: "Home", errors});
+  }
+  
+  const newUser = new User({name, email, password});
+  const created = await User.create(newUser);
+  if (created) {
+    req.flash("success_msg", "You are now registered and can log in.");
+    return res.redirect("/");
   }
 });
 
