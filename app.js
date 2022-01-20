@@ -1,10 +1,17 @@
-require("dotenv").config();
+require("express-async-errors");
 
 const path = require("path");
 const methodOverride = require("method-override");
 const connectDB = require("./db/connect");
 const MongoStore = require("connect-mongo");
 const session = require("express-session");
+const cookieParser = require("cookie-parser");
+const fileUpload = require("express-fileupload");
+const rateLimiter = require("express-rate-limit");
+const helmet = require("helmet");
+const xss = require("xss-clean");
+const cors = require("cors");
+const mongoSanitize = require("express-mongo-sanitize");
 
 // Express
 const express = require("express");
@@ -14,11 +21,21 @@ const app = express();
 const passport = require("passport");
 require('./config/passport')(passport);
 
+// Trust one reverse proxy for deployment
+app.set("trust proxy", 1);
+app.use(
+  rateLimiter({
+    // Limit each IP to a max of 60 requests per 15 minutes
+    windowMs: 15 * 60 * 1000,
+    max: 60,
+  })
+);
+
 // EJS configuration
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
-// Express body parser
+// Express body parsers
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
@@ -28,10 +45,23 @@ app.use(methodOverride('_method'));
 
 // Middleware
 if (process.env.NODE_ENV === "development") {
+  // Load .env variables and logger in dev mode only
+  require("dotenv").config();
   const logger = require("morgan");
   app.use(logger("dev"));
 }
+app.use(helmet());
+app.use(cors());
+app.use(xss());
+
+// Remove keys beginning with '$' to prevent query selector injection attacks
+app.use(mongoSanitize());
+
+app.use(cookieParser(process.env.JWT_SECRET));
 app.use("/public", express.static(path.join(__dirname, "public")));
+
+// Attach file objects from input fields onto req.files
+app.use(fileUpload());
 
 // Express session
 app.use(
@@ -80,7 +110,6 @@ const start_server = async () => {
   try {
     // Connect to MongoDB
     await connectDB(process.env.MONGO_URI);
-    console.log("Connected to the database.");
     // Start server
     app.listen(PORT, () => console.log(`Server listening on port: ${PORT}.`));
   }
