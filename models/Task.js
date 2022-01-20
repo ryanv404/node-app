@@ -12,7 +12,8 @@ const taskSchema = new mongoose.Schema(
       unique: true,
     },
     taskOwner: {
-      type: String,
+      type: mongoose.Schema.ObjectId,
+      ref: "User",
       required: [true, "Task owner must not be empty."],
     },
     taskStatus: {
@@ -23,8 +24,10 @@ const taskSchema = new mongoose.Schema(
     isCompleted: {
       type: Boolean,
       default: "false",
-    }
-  }, {timestamps: true});
+    },
+  },
+  {timestamps: true}
+);
 
 // Define mongoose model
 const Task = mongoose.model("Task", taskSchema);

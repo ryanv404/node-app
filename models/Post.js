@@ -18,10 +18,13 @@ const postSchema = new mongoose.Schema(
       required: [true, "Post body cannot be empty."],
     },
     postOwner: {
-      type: String,
+      type: mongoose.Schema.ObjectId,
+      ref: "User",
       required: [true, "Post owner cannot be empty."],
-    }
-  }, {timestamps: true});
+    },
+  },
+  {timestamps: true}
+);
 
 // Define mongoose model
 const Post = mongoose.model("Post", postSchema);

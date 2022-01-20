@@ -7,7 +7,7 @@ const Post = require("../models/Post");
 router.get("/", ensureAuthenticated, async (req, res) => {
   let posts = [];
   try {
-    posts = await Post.find({postOwner: req.user.username});
+    posts = await Post.find({postOwner: req.user._id});
   } catch (err) {
     console.log(err);
   }
@@ -24,7 +24,7 @@ router.post("/", ensureAuthenticated, async (req, res) => {
     const newPost = new Post({
       postTitle: req.body.postTitle,
       postContent: req.body.postContent,
-      postOwner: req.user.username
+      postOwner: req.user._id
     });
     await newPost.save();
   } catch (err) {

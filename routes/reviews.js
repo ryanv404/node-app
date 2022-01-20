@@ -39,10 +39,11 @@ router.post("/", async (req, res) => {
       return res.redirect("/reviews");
     }
     const newReview = new Review({
-      reviewTitle: req.body.reviewTitle,
-      movieName: req.body.movieName,
-      reviewBody: req.body.reviewBody,
-      reviewRating: req.body.reviewRating
+      title: req.body.reviewTitle,
+      movieTitle: req.body.movieName,
+      comment: req.body.reviewBody,
+      rating: req.body.reviewRating,
+      user: req.user._id
     });
 
     const successful = await Review.create(newReview);
@@ -62,10 +63,10 @@ router.put("/:reviewID", async (req, res) => {
     
     reviewRating = Number(reviewRating);
     const successful = await Review.findByIdAndUpdate(req.params.reviewID, {
-      reviewTitle: reviewTitle,
-      movieName: movieTitle,
-      reviewBody: reviewContent,
-      reviewRating: reviewRating
+      title: reviewTitle,
+      movieTitle: movieTitle,
+      comment: reviewContent,
+      rating: reviewRating
     });
     if (successful) {
       req.flash("success_msg", "Review successfully updated.");

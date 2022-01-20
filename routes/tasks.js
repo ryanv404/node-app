@@ -7,7 +7,7 @@ const Task = require("../models/Task");
 router.get('/', ensureAuthenticated, async (req, res) => {
   let tasks = [];
   try {
-    tasks = await Task.find({taskOwner: req.user.username});
+    tasks = await Task.find({taskOwner: req.user._id});
   } catch (err) {
     console.log(err);
   }
@@ -23,7 +23,7 @@ router.post('/', ensureAuthenticated, async (req, res) => {
   try {
     const newTask = new Task({
       taskName: req.body.task,
-      taskOwner: req.user.username
+      taskOwner: req.user._id
     });
     await newTask.save();
   } catch (err) {
