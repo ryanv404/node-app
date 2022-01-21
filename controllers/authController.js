@@ -12,12 +12,17 @@ const {
 } = require('../utils/index');
 
 const register = async (req, res) => {
-  const {email, name, password} = req.body;
+  const {email, name, password, confirm_pw} = req.body;
 
   // Check if email address is already in DB
   const emailAlreadyExists = await User.findOne({email});
   if (emailAlreadyExists) {
     throw new CustomError.BadRequestError('Email already exists.');
+  }
+
+  // Check if confirmation password === password
+  if (password !== confirm_pw) {
+    throw new CustomError.BadRequestError("Passwords do not match.");
   }
 
   // First registered user is an admin
@@ -48,14 +53,14 @@ const register = async (req, res) => {
 };
 
 const verifyEmail = async (req, res) => {
-  const {verificationToken, email} = req.body;
+  const {token, email} = req.query;
   const user = await User.findOne({email});
 
+  // Ensure that user exists and that verification token matches
   if (!user) {
     throw new CustomError.UnauthenticatedError('Verification failed');
   }
-
-  if (user.verificationToken !== verificationToken) {
+  if (user.verificationToken !== token) {
     throw new CustomError.UnauthenticatedError('Verification failed');
   }
 
