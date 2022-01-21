@@ -203,7 +203,6 @@ const resetPassword = async (req, res) => {
       user.passwordToken = null;
       user.passwordTokenExpirationDate = null;
       await user.save();
-
       res.send("Password has been reset.");
     } else {
       throw new CustomError.BadRequestError("Password could not be reset.");
@@ -216,7 +215,6 @@ const resetPassword = async (req, res) => {
 const ensureAuthenticated = (req, res, next) => {
   // Protect routes that require log in
   if (req.isAuthenticated()) return next();
-
   req.flash('error_msg', 'Please log in to view this page.');
   res.redirect('/');
 };
@@ -224,7 +222,6 @@ const ensureAuthenticated = (req, res, next) => {
 const forwardAuthenticated = (req, res, next) => {
   // Forward user to dashboard if already logged in
   if (!req.isAuthenticated()) return next();
-  
   res.redirect('/dashboard');      
 };
 

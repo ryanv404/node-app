@@ -7,12 +7,20 @@ const connectDB = require("./db/connect");
 const MongoStore = require("connect-mongo");
 const session = require("express-session");
 const cookieParser = require("cookie-parser");
+const flash = require("connect-flash");
 const fileUpload = require("express-fileupload");
 const rateLimiter = require("express-rate-limit");
 const helmet = require("helmet");
 const xss = require("xss-clean");
 const cors = require("cors");
 const mongoSanitize = require("express-mongo-sanitize");
+
+// Routers
+const userRouter = require("./routes/userRoutes");
+const authRouter = require("./routes/authRoutes");
+const orderRouter = require("./routes/orderRoutes");
+const reviewRouter = require("./routes/reviewRoutes");
+const productRouter = require("./routes/productRoutes");
 
 // Express
 const express = require("express");
@@ -36,15 +44,13 @@ app.use(
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
+// Middleware
 // Express body parsers
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
-
 // Redirect POST request to DELETE or PUT with:
 // "?_method=DELETE" or "?_method=PUT"
 app.use(methodOverride("_method"));
-
-// Middleware
 if (process.env.NODE_ENV === "development") {
   // Load logger in dev mode only
   const logger = require("morgan");
@@ -61,10 +67,8 @@ app.use(cors());
 app.use(xss());
 // Remove keys beginning with '$' to prevent query selector injection attacks
 app.use(mongoSanitize());
-
 app.use(cookieParser(process.env.JWT_SECRET));
 app.use("/public", express.static(path.join(__dirname, "public")));
-
 // Attach file objects from input fields onto req.files
 app.use(fileUpload());
 
@@ -87,7 +91,6 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Connect flash
-const flash = require("connect-flash");
 app.use(flash());
 
 // Global variables
@@ -104,6 +107,12 @@ app.use("/users", require("./routes/users.js"));
 app.use("/tasks", require("./routes/tasks.js"));
 app.use("/posts", require("./routes/posts.js"));
 app.use("/reviews", require("./routes/reviews.js"));
+
+app.use("/api/v1/auth", authRouter);
+app.use("/api/v1/users", userRouter);
+app.use("/api/v1/products", productRouter);
+app.use("/api/v1/reviews", reviewRouter);
+app.use("/api/v1/orders", orderRouter);
 
 // Error handlers
 app.use(require("./middleware/not-found"));
