@@ -3,7 +3,6 @@ require("express-async-errors");
 
 const path = require("path");
 const methodOverride = require("method-override");
-const connectDB = require("./db/connect");
 const MongoStore = require("connect-mongo");
 const session = require("express-session");
 const cookieParser = require("cookie-parser");
@@ -102,13 +101,13 @@ app.use((req, res, next) => {
 });
 
 // Routes
-app.use("/", require("./routes/index.js"));
+app.use("/", authRouter);
+app.use("/_/", require("./routes/index.js"));
 app.use("/users", require("./routes/users.js"));
 app.use("/tasks", require("./routes/tasks.js"));
 app.use("/posts", require("./routes/posts.js"));
 app.use("/reviews", require("./routes/reviews.js"));
 
-app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/products", productRouter);
 app.use("/api/v1/reviews", reviewRouter);
