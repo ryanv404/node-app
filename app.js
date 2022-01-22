@@ -120,15 +120,11 @@ app.use(require("./middleware/error-handler"));
 
 // Start server
 const PORT = process.env.PORT || 3000;
-const start_server = async () => {
-  try {
-    // Connect to MongoDB
-    await connectDB(process.env.MONGO_URI);
-    // Start server
-    app.listen(PORT, () => console.log(`Server listening on port: ${PORT}.`));
-  } catch (error) {
-    console.log(error);
-  }
+const start_server = () => {
+  // Connect to MongoDB
+  require("./config/database").connect();
+  // Start server
+  app.listen(PORT, () => console.log(`Server listening on port: ${PORT}.`));
 };
 
 start_server();
