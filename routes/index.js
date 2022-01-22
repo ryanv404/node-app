@@ -29,6 +29,7 @@ router.post("/login", rememberMeMiddleware, passport.authenticate("local", {
 // Log out user
 router.get("/logout", (req, res) => {
   req.logout();
+  req.session.destroy();
   req.flash("success_msg", "You are now logged out.");
   res.redirect("/");
 });

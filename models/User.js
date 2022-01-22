@@ -2,45 +2,51 @@ const mongoose = require("mongoose");
 const validator = require("validator");
 const bcrypt = require("bcrypt");
 
-const UserSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    required: [true, "Please provide a name."],
-    minlength: 3,
-    maxlength: 50,
-  },
-  email: {
-    type: String,
-    unique: true,
-    required: [true, "Please provide an email."],
-    validate: {
-      validator: validator.isEmail,
-      message: "Please provide a valid email.",
+const UserSchema = new mongoose.Schema(
+  {
+    first_name: {
+      type: String,
+      maxlength: 50,
+      default: null,
+    },
+    last_name: {
+      type: String,
+      maxlength: 50,
+      default: null,
+    },
+    email: {
+      type: String,
+      unique: true,
+      required: [true, "Please provide an email."],
+      validate: {
+        validator: validator.isEmail,
+        message: "Please provide a valid email.",
+      },
+    },
+    password: {
+      type: String,
+      required: [true, "Please provide a password."],
+    },
+    role: {
+      type: String,
+      enum: ["admin", "user"],
+      default: "user",
+    },
+    verificationToken: String,
+    isVerified: {
+      type: Boolean,
+      default: false,
+    },
+    verifiedOn: Date,
+    passwordToken: {
+      type: String,
+    },
+    passwordTokenExpirationDate: {
+      type: Date,
     },
   },
-  password: {
-    type: String,
-    required: [true, "Please provide a password."],
-    minlength: 6,
-  },
-  role: {
-    type: String,
-    enum: ["admin", "user"],
-    default: "user",
-  },
-  verificationToken: String,
-  isVerified: {
-    type: Boolean,
-    default: false,
-  },
-  verified: Date,
-  passwordToken: {
-    type: String,
-  },
-  passwordTokenExpirationDate: {
-    type: Date,
-  },
-}, {timestamps: true});
+  {timestamps: true}
+);
 
 UserSchema.pre("save", async function (next) {
   if (!this.isModified("password")) return next();
