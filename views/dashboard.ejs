@@ -38,7 +38,9 @@
       </ul>
     </div>
     <div class="text-center my-4">
-      <a href="/logout" class="text-decoration-none text-danger">Log out</a><br />
+      <form action="/logout?_method=DELETE" method="post">
+        <button type="submit" class="btn btn-outline-danger">Log out</button>
+      </form>
     </div>
   </body>
 </html>

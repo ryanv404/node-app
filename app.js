@@ -102,7 +102,6 @@ app.use((req, res, next) => {
 
 // Routes
 app.use("/", authRouter);
-app.use("/_/", require("./routes/index.js"));
 app.use("/users", require("./routes/users.js"));
 app.use("/tasks", require("./routes/tasks.js"));
 app.use("/posts", require("./routes/posts.js"));

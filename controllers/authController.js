@@ -21,12 +21,14 @@ const register = async (req, res) => {
   // Check if email address is already in DB
   const alreadyExists = await User.findOne({email});
   if (alreadyExists) {
-    throw new CustomError.BadRequestError('Email already exists. Please log in.');
+    req.flash("error_msg", "That email address is already registered.");
+    return res.redirect("/");
   }
-
+  
   // Check if confirmation password === password
   if (password !== confirm_pw) {
-    throw new CustomError.BadRequestError("Passwords do not match.");
+    req.flash("error_msg", "Passwords do not match.")
+    return res.redirect("/");
   }
 
   // First registered user is set to be an admin
@@ -54,7 +56,11 @@ const register = async (req, res) => {
     origin,
   });
 
-  res.status(StatusCodes.CREATED).json({msg: 'Success! Please check your email to verify your account.'});
+  req.flash(
+    "success_msg",
+    "Account created! Please check your email to verify your account."
+  );
+  return res.redirect("/");
 };
 
 const verifyEmail = async (req, res) => {
@@ -63,7 +69,8 @@ const verifyEmail = async (req, res) => {
 
   // Ensure that user exists and that verification token matches
   if (!user || (user.verificationToken !== token)) {
-    throw new CustomError.UnauthenticatedError('Verification failed');
+    req.flash("error_msg", "Account verification failed.");
+    return res.redirect("/");
   }
 
   // Verify user in the DB
@@ -72,29 +79,34 @@ const verifyEmail = async (req, res) => {
   user.verificationToken = '';
   await user.save();
 
-  res.status(StatusCodes.OK).json({msg: 'Email verified'});
+  req.flash("success_msg", "Your account has been successfully verified. Please log in.");
+  return res.redirect("/");
 };
 
 const login = async (req, res) => {
   const {email, password} = req.body;
   // Ensure user provided both an email and password
   if (!email || !password) {
-    throw new CustomError.BadRequestError('Please provide an email and password.');
+    req.flash("error_msg", "Please provide both an email and a password.");
+    return res.redirect("/");
   }
 
   // Ensure the user is registered and password is correct
   const user = await User.findOne({email});
   if (!user) {
-    throw new CustomError.UnauthenticatedError('Invalid credentials');
+    req.flash("error_msg", "Invalid credentials");
+    return res.redirect("/");
   }
   const isPasswordCorrect = await user.comparePassword(password);
   if (!isPasswordCorrect) {
-    throw new CustomError.UnauthenticatedError('Password is incorrect.');
+    req.flash("error_msg", "Incorrect password");
+    return res.redirect("/");
   }
 
   // Ensure user has a verified email address
   if (!user.isVerified) {
-    throw new CustomError.UnauthenticatedError('Please verify your email address.');
+    req.flash("error_msg", "Please verify your email address to log in.");
+    return res.redirect("/");
   }
 
   const tokenUser = createTokenUser(user);
@@ -108,13 +120,13 @@ const login = async (req, res) => {
   if (existingToken) {
     const {isValid} = existingToken;
     if (!isValid) {
-      throw new CustomError.UnauthenticatedError('Invalid credentials');
+      req.flash("error_msg", "Invalid credentials");
+      return res.redirect("/");
     }
     refreshToken = existingToken.refreshToken;
     attachCookiesToResponse({res, user: tokenUser, refreshToken});
 
-    res.status(StatusCodes.OK).json({user: tokenUser});
-    return;
+    return res.redirect("/dashboard");
   }
 
   // Create and store a new token
@@ -132,7 +144,7 @@ const login = async (req, res) => {
 
   attachCookiesToResponse({res, user: tokenUser, refreshToken});
 
-  res.status(StatusCodes.OK).json({user: tokenUser});
+  return res.redirect("/dashboard");
 };
 
 const logout = async (req, res) => {
@@ -149,7 +161,8 @@ const logout = async (req, res) => {
     expires: new Date(Date.now()),
   });
 
-  res.status(StatusCodes.OK).json({msg: 'User has been logged out!'});
+  req.flash("success_msg", "You have been logged out.");
+  return res.redirect("/");
 };
 
 const forgotPasswordPage = (req, res) => {
@@ -159,7 +172,8 @@ const forgotPasswordPage = (req, res) => {
 const forgotPassword = async (req, res) => {
   const {email} = req.body;
   if (!email) {
-    throw new CustomError.BadRequestError('Please provide a valid email.');
+    req.flash("error_msg", "Please provide a valid email.");
+    return res.redirect("/forgot-password");
   }
 
   // Look up the user if one exists
@@ -187,9 +201,10 @@ const forgotPassword = async (req, res) => {
     await user.save();
     
     req.flash("success_msg", "Please check your email for the password reset link.");
-    res.redirect("/");
+    return res.redirect("/");
   } else {
-    throw new CustomError.BadRequestError("Could not find a user with that email address.");
+    req.flash("error_msg", "Could not find a user with that email address.");
+    return res.redirect("/forgot-password");
   }
 };
 
@@ -203,11 +218,13 @@ const resetPassword = async (req, res) => {
 
   // Ensure that the user's token, email, and password were provided
   if (!token || !email || !password) {
+    req.flash("error_msg", "Please provide all values.");
     throw new CustomError.BadRequestError("Please provide all values.");
   }
 
   // Check if new password === retyped password
   if (password !== confirm_pw) {
+    req.flash("error_msg", "Passwords do not match.");
     throw new CustomError.BadRequestError("Passwords do not match.");
   }
 
@@ -230,12 +247,12 @@ const resetPassword = async (req, res) => {
       req.flash("success_msg", "Your password has been reset.");
       res.redirect("/");
     } else {
-      throw new CustomError.BadRequestError("Password could not be reset.");
+      req.flash("error_msg", "Password could not be reset.");
+      return res.redirect("/");
     }
   } else {
-    throw new CustomError.BadRequestError(
-      "Could not find a user with that email address."
-    );
+    req.flash("error_msg", "Could not find a user with that email address.");
+    return res.redirect("/");
   }
 };
 
@@ -263,6 +280,11 @@ const rememberMeMiddleware = (req, res, next) => {
   next();
 };
 
+// User's dashboard
+const userDashboard = (req, res) => {
+  res.render("dashboard", {title: "Dashboard"});
+};
+
 module.exports = {
   homepage,
   register,
@@ -275,5 +297,6 @@ module.exports = {
   resetPasswordPage,
   ensureAuthenticated,
   forwardAuthenticated,
-  rememberMeMiddleware
+  rememberMeMiddleware,
+  userDashboard
 };

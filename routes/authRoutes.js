@@ -10,10 +10,12 @@ const {
   forgotPassword,
   forgotPasswordPage,
   resetPassword,
-  resetPasswordPage
-} = require('../controllers/authController');
+  resetPasswordPage,
+  userDashboard
+} = require("../controllers/authController");
 
 router.get('/', homepage)
+router.get('/dashboard', userDashboard)
 router.post('/register', register);
 router.post('/login', login);
 router.delete('/logout', authenticateUser, logout);
