@@ -1,6 +1,5 @@
 const User = require('../models/User');
 const Token = require('../models/Token');
-const CustomError = require('../errors');
 const crypto = require('crypto');
 const {
   attachCookiesToResponse,
@@ -180,6 +179,11 @@ const forgotPassword = async (req, res) => {
   
   // If the user exists, send a password reset email
   if (user) {
+    // Prevent user from requesting new reset link unless prior window (10min) has expired
+    if (user.passwordTokenExpirationDate && (user.passwordTokenExpirationDate < currentDate)) {
+      req.flash("error_msg", "Please wait at least 10 minutes before requesting another reset link.");
+      return res.redirect("/");
+    }
     const passwordToken = crypto.randomBytes(70).toString('hex');
     
     // Send email
@@ -215,16 +219,16 @@ const resetPasswordPage = (req, res) => {
 const resetPassword = async (req, res) => {
   const {token, email, password, confirm_pw} = req.body;
 
-  // Ensure that the user's token, email, and password were provided
-  if (!token || !email || !password) {
+  // Ensure that the user's token, email, and passwords were provided
+  if (!token || !email || !password || !confirm_pw) {
     req.flash("error_msg", "Please provide all values.");
-    throw new CustomError.BadRequestError("Please provide all values.");
+    return res.redirect(`/reset-password?token=${token}&email=${email}`);
   }
 
   // Check if new password === retyped password
   if (password !== confirm_pw) {
     req.flash("error_msg", "Passwords do not match.");
-    throw new CustomError.BadRequestError("Passwords do not match.");
+    return res.redirect(`/reset-password?token=${token}&email=${email}`);
   }
 
   const user = await User.findOne({email});
@@ -243,11 +247,11 @@ const resetPassword = async (req, res) => {
       user.passwordTokenExpirationDate = null;
       await user.save();
 
-      req.flash("success_msg", "Your password has been reset.");
-      res.redirect("/");
-    } else {
-      req.flash("error_msg", "Password could not be reset.");
+      req.flash("success_msg", "Your password has been updated!");
       return res.redirect("/");
+    } else {
+      req.flash("error_msg", "Password could not be reset. Please request a new reset link.");
+      return res.redirect("/forgot-password");
     }
   } else {
     req.flash("error_msg", "Could not find a user with that email address.");
