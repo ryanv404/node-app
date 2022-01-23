@@ -11,11 +11,11 @@ const {
   forgotPasswordPage,
   resetPassword,
   resetPasswordPage,
-  userDashboard
+  dashboard
 } = require("../controllers/authController");
 
 router.get('/', homepage)
-router.get('/dashboard', userDashboard)
+router.get('/dashboard', dashboard)
 router.post('/register', register);
 router.post('/login', login);
 router.delete('/logout', authenticateUser, logout);
