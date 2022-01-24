@@ -15,7 +15,8 @@ const authenticateUser = async (req, res, next) => {
   }
 
   if (!token) {
-    throw new CustomError.UnauthenticatedError('Authentication invalid');
+    req.flash("error_msg", "Authentication invalid");
+    return res.redirect("/");
   }
   try {
     const payload = isTokenValid(token);
@@ -28,14 +29,16 @@ const authenticateUser = async (req, res, next) => {
 
     next();
   } catch (error) {
-    throw new CustomError.UnauthenticatedError('Authentication invalid');
+    req.flash("error_msg", "Authentication invalid");
+    return res.redirect("/");
   }
 };
 
 const authorizeRoles = (...roles) => {
   return (req, res, next) => {
     if (!roles.includes(req.user.role)) {
-      throw new CustomError.UnauthorizedError('Unauthorized to access this route.');
+      req.flash("error_msg", "You are not authorized to access this route.");
+      return res.redirect("/");
     }
     next();
   };

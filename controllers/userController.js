@@ -26,7 +26,8 @@ const showCurrentUser = async (req, res) => {
 const updateUser = async (req, res) => {
   const {email, name} = req.body;
   if (!email || !name) {
-    throw new CustomError.BadRequestError('Please provide all values.');
+    req.flash("error_msg", "Please provide all values.");
+    return res.redirect("/");
   }
 
   // Update the user in the DB with new values

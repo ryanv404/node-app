@@ -1,4 +1,3 @@
-const CustomError = require('../errors/index');
 const {isTokenValid, attachCookiesToResponse} = require("../utils/index");
 const Token = require('../models/Token');
 
@@ -19,7 +18,8 @@ const authenticateUser = async (req, res, next) => {
     });
 
     if (!existingToken || !existingToken.isValid) {
-      throw new CustomError.UnauthenticatedError('Authentication Invalid');
+      req.flash("error_msg", "Authentication invalid");
+      return res.redirect("/");
     }
 
     attachCookiesToResponse({
@@ -31,14 +31,16 @@ const authenticateUser = async (req, res, next) => {
     req.user = payload.user;
     next();
   } catch (error) {
-    throw new CustomError.UnauthenticatedError('Authentication Invalid');
+    req.flash("error_msg", "Authentication invalid");
+    return res.redirect("/");
   }
 };
 
 const authorizePermissions = (...roles) => {
   return (req, res, next) => {
     if (!roles.includes(req.user.role)) {
-      throw new CustomError.UnauthorizedError('Unauthorized to access this route.');
+      req.flash("error_msg", "You are not authorized to access this route.");
+      return res.redirect("/");
     }
     next();
   };
