@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Footer() {
+const Footer = () => {
   const today = new Date();
 
   return (
